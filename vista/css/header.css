@@ -1,5 +1,5 @@
 .nombreUsuario{
-    color: white;
+    color: #9d9d9d;
     margin-top: 15px; 
     margin-right: 15px;
 }
@@ -10,9 +10,6 @@
     border-radius: 0;
 }
 
-.navbar li a:hover {
-    color: blue;
-}
 
 .navbar {
     margin-bottom: 0;

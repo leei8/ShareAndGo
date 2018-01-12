@@ -7,33 +7,32 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
+                <label>Datos de cuenta</label>   
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <label for="contrasena">Contraseña:</label>
-                    <input type="password" class="form-control" id="contrasena">
+                    <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
                 </div>
                 <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre">
+                    <input type="password" class="form-control" id="contrasena" placeholder="Confirma tu ontraseña">
+                </div>
+                <label>Datos personales</label>  
+                <div class="form-group">
+                     <input type="text" class="form-control" id="nombre" placeholder="Nombre">
                 </div>
                 <div class="form-group">
-                    <label for="contrasena">Apellido:</label>
-                    <input type="text" class="form-control" id="contrasena">
+                    <input type="text" class="form-control" id="contrasena" placeholder="Apellido">
                 </div> 
                 <div class="form-group">
+                    <input type="text" class="form-control" id="municipio" placeholder="Municipio">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="telefono" placeholder="Telefono">
+                </div>
+                <div class="form-group">
                     <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" class="form-control" id="fecha_nacimiento">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Numero de telefono:</label>
-                    <input type="text" class="form-control" id="telefono">
-                </div>
-                <div class="form-group">
-                    <label for="municipio">Municipio:</label>
-                    <input type="text" class="form-control" id="municipio">
+                    <input type="date" class="form-control" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
                 </div>
             </div>
             <div class="modal-footer">

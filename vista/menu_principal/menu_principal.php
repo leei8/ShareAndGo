@@ -19,6 +19,13 @@ and open the template in the editor.
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
         <script src="../../js/cargar_combos_municipio.js" type="text/javascript"></script>
         <script src="../../js/cargar_combo_marcas.js" type="text/javascript"></script>
+        <script src="../../js/jquery-3.2.1.js" type="text/javascript"></script>
+        <script src="../../js/menu_principal.js" type="text/javascript"></script>
+        <script src="../../js/angular.min.js" type="text/javascript"></script>
+        <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
+       
+     
+
     </head>
     <body>
         <?php
@@ -26,20 +33,33 @@ and open the template in the editor.
         ?>
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
-                <h3>Buscador</h3>
-                <button type="submit" class="btn btn-default">salida</button>
-                <button type="submit" class="btn btn-default">dias</button>
+                 <input class="topcoat-combo-input-filtro" type="text" id="municipio" ng-model="municipio_busqueda" list="poo" placeholder="Salgo de...">
+                <datalist id="poo">
+                    
+                </datalist>
+                
+                <div class="diasBuscador">
+                    <table>
+                        <tr>
+                            <td><div class="diaBuscador">L</div></td>
+                            <td><div class="diaBuscador">M</div></td>
+                            <td><div class="diaBuscador">X</div></td>
+                            <td><div class="diaBuscador">J</div></td>
+                            <td><div class="diaBuscador">V</div></td>
+                        </tr>   
+                    </table>
+                </div> 
             </div>
             <div style="text-align: center">
                 <div class="container text-center">
-                    <div class="row">
+                    <div class="row" ng-controller="mainController">
                         <!-- FALTA PONER FOREACH -->
                         <?php require '../multipagina/tarjeta_viaje.php'; ?>
                         <!-- ------------------- -->
                     </div>
                 </div>
                 <div class="imagen">
-                    <img style="width: 100%" src="../img/imagen_men_principal.jpg" alt="Jane" >
+                   
                     <div class="" style="text-align: center">
                         <h2>Jane Doe</h2>
                         <p class="title">CEO & Founder</p>

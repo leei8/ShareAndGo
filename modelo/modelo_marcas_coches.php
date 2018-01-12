@@ -10,7 +10,7 @@ class modelo_marcas{
     }
     
     public function mostrar_marcas(){
-        $consulta=$this->link->query("CALL sp_mostrar_marcas()");
+        $consulta=$this->link->query("CALL sp_mostrar_marcas_vehiculos()");
         while($filas=$consulta->fetch_assoc()){
             $this->marcas[]=$filas;
         }

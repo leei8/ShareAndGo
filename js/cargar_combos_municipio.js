@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     cargar_combo_municipios();
     function cargar_combo_municipios() {
         $.ajax({
@@ -12,7 +12,6 @@ $( document ).ready(function() {
                     milista += "<option id=" + dato.id_municipio + ">" + dato.municipio + ", " + dato.provincia + "</option>";
                 });
                 $('datalist[name=municipio_salida]').html(milista);
-//                $('#municipio_paso').html(milista);
                 return false;
             },
             error: function (xhr) {
@@ -20,9 +19,4 @@ $( document ).ready(function() {
             }
         });
     }
-
-    $('#anadir_parada').on('click', function(){
-        alert('asds');
-    });
-    //aa
 });

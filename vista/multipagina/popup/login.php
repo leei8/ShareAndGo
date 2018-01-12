@@ -5,14 +5,16 @@
             <form action="../../controlador/controlador_login.php" method="POST">
                 <div class="modal-header"> 
                     <button type="button" class="close" data-dismiss="modal">&times;</button> 
-                    <h4 class="modal-title">Inicia sesión</h4>
+                    <h4 class="modal-title">Logearse</h4>
                 </div> 
                 <div class="modal-body"> 
                     <div class="form-group"> 
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email"> 
+                        <label for="usr">Email:</label> 
+                        <input type="email" class="form-control" id="email" name="email"> 
                     </div> 
                     <div class="form-group"> 
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+                        <label for="pwd">Contraseña:</label> 
+                        <input type="password" class="form-control" id="contrasena" name="contrasena">
                     </div>
                 </div> 
                 <div class="modal-footer"> 

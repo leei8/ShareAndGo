@@ -10,7 +10,7 @@ class modelo_usuario{
     }
     
     public function comprobar_login($email, $contrasena){
-        $consulta=$this->link->query("CALL sp_comprobacion_login('$email', '$contrasena')");
+        $consulta=$this->link->query("CALL sp_comprobacion_sesion('$email', '$contrasena')");
         $usuario = mysqli_fetch_array($consulta);
         return $usuario;
     }

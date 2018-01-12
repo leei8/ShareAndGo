@@ -6,8 +6,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-        session_start();
-        ?>
+session_start();
+?>
 <html>
     <head>
         <title>Menu principal</title>
@@ -17,6 +17,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="../css/login.css">
         <link rel="stylesheet" href="../css/menu_principal.css">
         <link rel="stylesheet" href="../css/combobox_buscador.css">
+        <link rel="stylesheet" href="../css/header.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
@@ -68,18 +69,18 @@ and open the template in the editor.
 
                 <div class="col-sm-5">
                     <img src="../img/registro_coche.jpg" class="img-responsive" style="width:100%; border-radius: 10px" alt="Image"/>
-        
+
                 </div>
                 <div class="col-sm-6">
-                    
+
                     <h2>¿Quieres publicar tu trayecto?</h2>
                     <p style="margin-bottom: 30px; margin-top: 30px">Antes de publicarlo, necesitas tener un vehículo.<br>Registra tantos coches como tengas y ¡disfruta compartiendo tu viaje con los demás!</p>
-                <div class="container text-center" >
+                    <div class="container text-center" >
 
-                    <button href="#" class="btn btn-info btn-lg" id="registrarcoche" data-toggle="modal" data-target="#myModalRegistro" style="width: 400px">
-                        <span class="glyphicon glyphicon-plus-sign"></span> Registrar coche
-                    </button>
-                </div>
+                        <button href="#" class="btn btn-info btn-lg" id="registrarcoche" data-toggle="modal" data-target="#myModalRegistro" style="width: 400px">
+                            <span class="glyphicon glyphicon-plus-sign"></span> Registrar coche
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

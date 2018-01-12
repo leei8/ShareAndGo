@@ -10,7 +10,7 @@
                     <input class="topcoat-combo-input" type="text" list="poo" placeholder="Salgo de...">
                     <datalist id="poo" name="municipio_salida">
                     </datalist>
-             
+
                     <br><br>
                     <div class="input-group control-group after-add-more">
                         <div class="input-group-btn"> 
@@ -21,7 +21,9 @@
                     <div class="copy-fields hide">
                         <div class="control-group input-group" style="margin-top:10px">
 
-                            <input type="text" name="addmore[]" id="municipio_paso" class="form-control topcoat-combo-input" placeholder="Paso por...">
+                            <input class="topcoat-combo-input" type="text" list="poo" placeholder="Paso por...">
+                            <datalist id="poo" name="municipio_paso">
+                            </datalist>
                             <div class="input-group-btn"> 
                                 <button class="btn btn-danger remove" type="button" id="anadir_parada"><i class="glyphicon glyphicon-remove"></i> Borrar</button>
                             </div>
@@ -31,8 +33,8 @@
                 </div>
 
                 <input class="topcoat-combo-input" type="text" list="poo" placeholder="Elige el coche que vayas a utilizar">
-                    <datalist id="poo" name="coche">
-                    </datalist>
+                <datalist id="poo" name="coche">
+                </datalist>
 
                 <br>
 

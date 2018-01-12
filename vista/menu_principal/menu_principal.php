@@ -23,8 +23,8 @@ and open the template in the editor.
         <script src="../../js/menu_principal.js" type="text/javascript"></script>
         <script src="../../js/angular.min.js" type="text/javascript"></script>
         <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
-       
-     
+
+
 
     </head>
     <body>
@@ -33,11 +33,11 @@ and open the template in the editor.
         ?>
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
-                 <input class="topcoat-combo-input-filtro" type="text" id="municipio" ng-model="municipio_busqueda" list="poo" placeholder="Salgo de...">
+                <input class="topcoat-combo-input-filtro" type="text" id="municipio" ng-model="municipio_busqueda" list="poo" placeholder="Salgo de...">
                 <datalist id="poo">
-                    
+
                 </datalist>
-                
+
                 <div class="diasBuscador">
                     <table>
                         <tr>
@@ -58,23 +58,35 @@ and open the template in the editor.
                         <!-- ------------------- -->
                     </div>
                 </div>
-                <div class="imagen">
-                   
-                    <div class="" style="text-align: center">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO & Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
-                        <p><button id="registrarcoche" class="btn btn-primary" data-toggle="modal" data-target="#myModalRegistro">Registrar coche</button></p>
-                    </div>
-                    <?php
-                    require_once "../multipagina/popup/registrar_coche.php";
-                    ?>
+            </div>
+        </div>
+        <div class="jumbotron" style="margin-bottom: 20px; margin-top: 50px">
+            <div class="container text-center">
+
+                <div class="col-sm-5">
+                    <img src="../img/registro_coche.jpg" class="img-responsive" style="width:100%; border-radius: 10px" alt="Image"/>
+        
+                </div>
+                <div class="col-sm-6">
+                    
+                    <h2>¿Quieres publicar tu trayecto?</h2>
+                    <p style="margin-bottom: 30px; margin-top: 30px">Antes de publicarlo, necesitas tener un vehículo.<br>Registra tantos coches como tengas y ¡disfruta compartiendo tu viaje con los demás!</p>
+                <div class="container text-center" >
+
+                    <button href="#" class="btn btn-info btn-lg" id="registrarcoche" data-toggle="modal" data-target="#myModalRegistro" style="width: 400px">
+                        <span class="glyphicon glyphicon-plus-sign"></span> Registrar coche
+                    </button>
+                </div>
                 </div>
             </div>
         </div>
         <?php
-        require_once "../multipagina/footer.php";
+        require_once "../multipagina/popup/registrar_coche.php";
         ?>
-    </body>
+    </div>
+
+    <?php
+    require_once "../multipagina/footer.php";
+    ?>
+</body>
 </html>

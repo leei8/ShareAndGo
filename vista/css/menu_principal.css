@@ -1,0 +1,119 @@
+.tarjetaViaje{
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    padding: 10px;
+    width: 49%;
+    margin: 5px;
+    float: left;
+    border-color: #8b8b8b;
+    background-color: #f8f8f8;
+}
+.row{
+    margin: auto;
+}
+.dias{
+    width: 100%;
+}
+.dias td{
+    margin: auto;
+    border-radius: 5px;
+}
+.dia{
+    width: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    background-color: white;
+}
+.diaSeleccionado{
+    width: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    background-color: #337ab7;
+    color: white;
+}
+.plazas{
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    background-color: #337ab7;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.plazasAgotado{
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.zonaPlazas{
+    text-align: center;
+    margin-top: 15px;
+}
+.tipoSeleccionado{
+    border-width: thin;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #8b8b8b;
+    background-color: #337ab7;
+    padding: 2px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.informacion{
+    width: 50%; 
+    float: left
+}
+.nombre{
+    width: 50%;
+    float: left;
+}
+.iconoVolante{
+    height: 17px;
+    float: next
+}
+.mapa{
+    width: 100%; 
+    float: left
+}
+.tipoNoSeleccionado{
+    border-width: thin;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #8b8b8b;
+    background-color: white;
+    padding: 2px;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tipoTrayecto{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.nombreConductor{
+    border-width: thin;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #8b8b8b;
+    background-color: #337ab7;
+    padding: 2px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nombreExperiencia{
+    width: 100%;
+    float: left; 
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+    padding: 2px;
+}

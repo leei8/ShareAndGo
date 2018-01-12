@@ -1,0 +1,50 @@
+.topcoat-datalist {
+  display: block;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+.topcoat-combo-input {
+  line-height: 100%;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  padding: 0.563rem;
+  border: 1px solid #9daca9;
+  border-radius: 4px;
+  background-origin: content-box;
+  background-color: #fff;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/49364/ico-down.svg);
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-size: 8px 4px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
+  color: #454545;
+  vertical-align: top;
+  width: 100%; 
+  border-radius: 5px; 
+  border: solid; 
+  border-width: thin; 
+  height: 30px;
+}
+
+.topcoat-combo-input:focus {
+  background-color: #fff;
+  color: #454545;
+  border: 1px solid #0036ff;
+  box-shadow: 0 0 0 2px #6fb5f1;
+}
+
+.topcoat-combo-input:disabled::-webkit-input-placeholder {
+  color: #454545;
+}
+
+.topcoat-combo-input:disabled::-moz-input-placeholder {
+  color: #454545;
+}
+
+.topcoat-combo-input:disabled::-ms-input-placeholder {
+  color: #454545;
+}
+
+.topcoat-combo-input:invalid {
+  border: 1px solid #ec514e;
+}
+/*aa*/

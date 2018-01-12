@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
             </button>
-            <img src="../img/logo.png" style="height: 70px"/><br>
+            <a href="../menu_principal/menu_principal.php"><img src="../img/logo.png" style="height: 70px"/></a><br>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

@@ -1,3 +1,4 @@
+<form name="mensaje" action="../../mensaje.php" method="POST">
 <div id="registroPopUp" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -36,10 +37,11 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Enviar</button>
+                <button type="submit" class="btn btn-default" data-dismiss="modal">Enviar</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
             </div>
         </div>
 
     </div>
 </div>
+</form>

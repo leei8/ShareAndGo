@@ -44,15 +44,15 @@
                 </div>
                 <div class="col-sm-5 divBotones">
                     <button href="#" class="btn btn-info boton" id="modifiperfil" data-toggle="modal" data-target="#modificarPerfil">
-                     <span class="glyphicon glyphicon-wrench"></span>Modificar perfil    
+                     <span class="glyphicon glyphicon-wrench"></span> Modificar perfil    
                     </button>
                     <br>
                     <button href="#" class="btn btn-info boton" id="registrarcoche" data-toggle="modal" data-target="#myModalRegistro">
-                        <span class="glyphicon glyphicon-plus-sign"></span>Registrar coche
+                        <span class="glyphicon glyphicon-plus-sign"></span> Registrar vehículo
                     </button>
                         <br>
                     <button href="#" class="btn btn-info boton" id="anadirviaje" data-toggle="modal" data-target="#publicarViajePopUp">
-                        <span class="glyphicon glyphicon-road"></span> Nuevo  trayecto 
+                        <span class="glyphicon glyphicon-road"></span> Nuevo trayecto 
                     </button>
                 </div>
             </div>
@@ -63,10 +63,10 @@
         require_once '../multipagina/popup/publicar_trayecto.php';
         ?>
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">Mensajes</a></li>
-            <li><a data-toggle="tab" href="#menu1">Mis trayectos</a></li>
-            <li><a data-toggle="tab" href="#menu2">Viajes</a></li>
-            <li><a data-toggle="tab" href="#menu3">Mis coches</a></li>
+            <li class="active"><a data-toggle="tab" href="#home">Mensajes y peticiones</a></li>
+            <li><a data-toggle="tab" href="#menu1">Mis trayectos compartidos</a></li>
+            <li><a data-toggle="tab" href="#menu2">Mis trayectos creados</a></li>
+            <li><a data-toggle="tab" href="#menu3">Mis vehículos</a></li>
         </ul>
 
         <div class="tab-content tablasPerfil">

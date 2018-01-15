@@ -1,5 +1,6 @@
 $(document).ready(function () {
-function cargar_combo_municipios() {
+    var $numero_trayectos = 0;
+    function cargar_combo_municipios() {
         $.ajax({
             type: 'POST',
             dstaType: 'json',
@@ -25,12 +26,17 @@ function cargar_combo_municipios() {
     });
 //    FUNCION PARA AÑADIR Y BORRAR TRAYECTOS
     $(".add-more").click(function () {
+        if ($numero_trayectos === 4){
+            return false;
+        }
         var html = $(".copy-fields").html();
         $(".after-add-more").after(html);
         cargar_combo_municipios();
+        $numero_trayectos = $numero_trayectos + 1;
     });
     $("body").on("click", ".remove", function () {
         $(this).parents(".control-group").remove();
+        $numero_trayectos = $numero_trayectos - 1;
     });
-    
+
 });

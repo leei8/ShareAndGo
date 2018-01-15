@@ -36,12 +36,12 @@
                 <div class="col-sm-5">
                     <h3>Datos personales:</h3>
                     <ul style="list-style: none; padding: 5px;">
-                        <li>Nombre: </li>
-                        <li>Apellido: </li>
-                        <li>Email: </li>
-                        <li>Fecha de nacimiento: </li>
-                        <li>Telefono: </li>
-                        <li>municipio: </li>
+                        <li>Nombre: <?php echo $_SESSION['nombre']; ?> </li>
+                        <li>Apellido: <?php echo $_SESSION['apellido']; ?> </li>
+                        <li>Email: <?php echo $_SESSION['email']; ?> </li>
+                        <li>Fecha de nacimiento: <?php echo $_SESSION['fecha_nacimiento']; ?> </li>
+                        <li>Telefono: <?php echo $_SESSION['movil']; ?> </li>
+                        <li>municipio: <?php echo $_SESSION['id_municipio']; ?> </li>
                     </ul>
                 </div>
                 <div class="col-sm-5 divBotones">

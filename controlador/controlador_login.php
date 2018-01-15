@@ -4,6 +4,9 @@ require_once '../modelo/modelo_usuario.php';
 $emailUsuario = filter_input(INPUT_POST, 'email');
 $contrasena = filter_input(INPUT_POST, 'contrasena');
 
+$date = new DateTime($datos['fecha_nacimiento']);
+$date->format('Y-m-d');
+
 echo $emailUsuario;
 
 $cont = new modelo_usuario();
@@ -15,7 +18,7 @@ if ($datos != null) {
     $_SESSION['email'] = $datos['email'];
     $_SESSION['nombre'] = $datos['nombre'];
     $_SESSION['apellido'] = $datos['apellido'];
-    $_SESSION['fechaNacimiento'] = $datos['fecha_nacimiento'];
+    $_SESSION['fechaNacimiento'] = $date;
     $_SESSION['movil'] = $datos['movil'];
     $_SESSION['idMunicipio'] = $datos['id_municipio'];
     $_SESSION['start'] = time();

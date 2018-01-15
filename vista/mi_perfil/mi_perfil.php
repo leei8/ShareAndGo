@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-        session_start();
-        ?>
+session_start();
+?>
 <html lang="en">
     <head>
         <title>Mi perfil</title>
@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/miPerfil.css">
         <link rel="stylesheet" href="../css/header.css">
-          <link rel="stylesheet" href="../css/footer.css">
-          <link rel="stylesheet" href="../css/publicar_trayecto.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/publicar_trayecto.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="../css/combobox_buscador.css" rel="stylesheet" type="text/css"/>
@@ -21,6 +21,7 @@
         <script src="../../js/cargar_combos_municipio.js" type="text/javascript"></script>
         <script src="../../js/angular.min.js" type="text/javascript"></script>
         <script src="../../js/cargar_combo_marcas.js" type="text/javascript"></script>
+        <script src="../../js/cargar_tablas_mi_perfil.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="demo">
@@ -39,20 +40,20 @@
                         <li>Nombre: <?php echo $_SESSION['nombre']; ?> </li>
                         <li>Apellido: <?php echo $_SESSION['apellido']; ?> </li>
                         <li>Email: <?php echo $_SESSION['email']; ?> </li>
-                        <li>Fecha de nacimiento: <?php echo $_SESSION['fecha_nacimiento']; ?> </li>
+                        <li>Fecha de nacimiento: <?php echo date('d-m-Y', $_SESSION['fecha_nacimiento']); ?> </li>
                         <li>Telefono: <?php echo $_SESSION['movil']; ?> </li>
-                        <li>municipio: <?php echo $_SESSION['id_municipio']; ?> </li>
+                        <li>municipio: <?php echo $_SESSION['municipio']; ?> </li>
                     </ul>
                 </div>
                 <div class="col-sm-5 divBotones">
                     <button href="#" class="btn btn-info boton" id="modifiperfil" data-toggle="modal" data-target="#modificarPerfil">
-                     <span class="glyphicon glyphicon-wrench"></span> Modificar perfil    
+                        <span class="glyphicon glyphicon-wrench"></span> Modificar perfil    
                     </button>
                     <br>
                     <button href="#" class="btn btn-info boton" id="registrarcoche" data-toggle="modal" data-target="#myModalRegistro">
                         <span class="glyphicon glyphicon-plus-sign"></span> Registrar vehículo
                     </button>
-                        <br>
+                    <br>
                     <button href="#" class="btn btn-info boton" id="anadirviaje" data-toggle="modal" data-target="#publicarViajePopUp">
                         <span class="glyphicon glyphicon-road"></span> Nuevo trayecto 
                     </button>
@@ -66,8 +67,8 @@
         ?>
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#home">Mensajes y peticiones</a></li>
-            <li><a data-toggle="tab" href="#menu1">Mis trayectos compartidos</a></li>
-            <li><a data-toggle="tab" href="#menu2">Mis trayectos creados</a></li>
+            <li><a data-toggle="tab" href="#menu1">Mis trayectos creados</a></li>
+            <li><a data-toggle="tab" href="#menu2">Mis trayectos compartidos</a></li>
             <li><a data-toggle="tab" href="#menu3">Mis vehículos</a></li>
         </ul>
 

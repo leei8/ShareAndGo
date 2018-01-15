@@ -4,11 +4,6 @@ require_once '../modelo/modelo_usuario.php';
 $emailUsuario = filter_input(INPUT_POST, 'email');
 $contrasena = filter_input(INPUT_POST, 'contrasena');
 
-$date = new DateTime($datos['fecha_nacimiento']);
-$date->format('Y-m-d');
-
-echo $emailUsuario;
-
 $cont = new modelo_usuario();
 $datos = $cont->comprobar_login($emailUsuario, $contrasena);
 

@@ -13,7 +13,7 @@ $( document ).ready(function() {
                 midato = JSON.parse(datos)
                 milista = "";
                 $.each(midato, function (i, dato) {
-                    milista += "<option id=" + dato.id_marca + ">" + dato.nombre + " </option>";
+                    milista += "<option id='" + dato.id_marca + "' value='" + dato.id_marca + "'>" + dato.nombre + " </option>";
                 });
                 $('datalist[name=marca]').html(milista);
 //                $('#municipio_paso').html(milista);

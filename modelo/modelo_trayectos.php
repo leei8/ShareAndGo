@@ -26,7 +26,7 @@ class modelo_trayecto {
         return $this->trayectos_compartidos;
     }
     
-    public function seleccionar_creados_del_usuario($id_usuario) {
+    public function seleccionar_trayectos_creados_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_trayectos_creados_usuario('$id_usuario')");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
             $this->trayectos_creados[] = $row;

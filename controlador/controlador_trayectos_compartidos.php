@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../../modelo/modelo_trayectos.php';
+require_once '../modelo/modelo_trayectos.php';
 
 $id_usuario = $_SESSION['id'];
 

@@ -8,28 +8,28 @@ and open the template in the editor.
 <?php
 session_start();
 ?>
-<html>
+<html ng-app="mi_buscador">
     <head>
         <title>Menu principal</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <script src="../../js/angular.min.js" type="text/javascript"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/menu_principal.css">
         <link rel="stylesheet" href="../css/combobox_buscador.css">
-        <link rel="stylesheet" href="../css/header.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
+
         <script src="../../js/cargar_combos_municipio.js" type="text/javascript"></script>
         <script src="../../js/cargar_combo_marcas.js" type="text/javascript"></script>
         <script src="../../js/jquery-3.2.1.js" type="text/javascript"></script>
         <script src="../../js/menu_principal.js" type="text/javascript"></script>
-        <script src="../../js/angular.min.js" type="text/javascript"></script>
+
         <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
-
-
-
+        <script src="../../js/registrar_coche.js" type="text/javascript"></script>
+        <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
     </head>
     <body>
         <?php
@@ -37,8 +37,8 @@ session_start();
         ?>
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
-                <input class="topcoat-combo-input-filtro" type="text" id="municipio" ng-model="municipio_busqueda" list="poo" placeholder="Salgo de...">
-                <datalist id="poo">
+                <input class="topcoat-combo-input-filtro" type="text" id="municipio"list="poo1" placeholder="Salgo de...">
+                <datalist id="poo1">
 
                 </datalist>
 
@@ -58,7 +58,7 @@ session_start();
                 <div class="container text-center">
                     <div class="row" ng-controller="mainController">
                         <!-- FALTA PONER FOREACH -->
-                        <?php require '../multipagina/tarjeta_viaje.php'; ?>
+                        <?php include ('../multipagina/tarjeta_viaje.php'); ?>
                         <!-- ------------------- -->
                     </div>
                 </div>

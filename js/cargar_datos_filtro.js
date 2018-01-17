@@ -1,32 +1,17 @@
 var mi_buscador = angular.module('mi_buscador', []);
 
-//mi_buscador.controller('mainController'),["$scope","http",function($scope,$http){
-//        $http.get("../controlador/controlador_combo_municipios.php").success(function(data){
-//            
-//            $scope.lista = data;
-//            
-//        });
-//        
-//        }];
-
-mi_buscador.controller('mainController'), ["$scope", "http", function ($scope, $http) {
+mi_buscador.controller('mainController', ["$scope", "$http", function ($scope, $http) {
         $scope.listaTrayectos = [];
 
-        $http.get("../../controlador/controlador_trayectos_municipios.php").success(function (data){
+        $http.get("../../controlador/controlador_trayectos_municipios.php")
+                .then(function (response) {
 
 
-            $scope.listaTrayectos = data;
+                    $scope.listaTrayectos = response.data;
 
-        });
-}];
-//mi_buscador.controller("mainController", function ($scope, $http) {
-//
-//    $scope.listaTrayectos = [];
-//
-//    $http.get("../controlador/controlador_trayectos_municipios.php").success(function (data) {
-//        $scope.listaTrayectos = data;
-//    });
+                });
 
-
-
-
+                $scope.copia = $scope.listaTrayectos;
+                
+          
+    }]);

@@ -3,7 +3,7 @@
         <tr>
             <th>Conductor</th>
             <th>Vehiculo</th>
-            <th>Salida</th>
+            <th>Municipios</th>
             <th>Plazas disponibles</th>
             <th>Dias</th>
             <th>Tiempo estimado</th>

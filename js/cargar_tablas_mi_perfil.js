@@ -10,7 +10,7 @@ $(document).ready(function () {
                 $.each(midato, function (i, dato) {
                     milista += "<tr><td>"
                             + dato['matricula'] + "</td><td>"
-                            + dato['municipio'] + "</td><td>"
+                            + dato['municipios'] + "</td><td>"
                             + dato['fecha_creacion'] + "</td><td>"
                             + dato['tiempo_estimado'] + "</td><td>"
                             + dato['plazas_disponibles'] + "</td>"

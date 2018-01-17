@@ -8,7 +8,7 @@ session_start();
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/miPerfil.css">
+        <link rel="stylesheet" href="../css/mi_perfil.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/publicar_trayecto.css">
@@ -40,9 +40,9 @@ session_start();
                         <li>Nombre: <?php echo $_SESSION['nombre']; ?> </li>
                         <li>Apellido: <?php echo $_SESSION['apellido']; ?> </li>
                         <li>Email: <?php echo $_SESSION['email']; ?> </li>
-                        <li>Fecha de nacimiento: <?php echo date('d-m-Y', $_SESSION['fecha_nacimiento']); ?> </li>
+                        <li>Fecha de nacimiento: <?php echo date('d/m/Y', $_SESSION['fecha_nacimiento']); ?> </li>
                         <li>Telefono: <?php echo $_SESSION['movil']; ?> </li>
-                        <li>municipio: <?php echo $_SESSION['municipio']; ?> </li>
+                        <li>Municipio: <?php echo $_SESSION['municipio']; ?> </li>
                     </ul>
                 </div>
                 <div class="col-sm-5 divBotones">

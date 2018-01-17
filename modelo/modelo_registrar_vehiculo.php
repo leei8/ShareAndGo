@@ -8,7 +8,7 @@ class modelo_registro_vehiculo {
         $this->link = Conectar::conexion();
     }
 
-    public function registrar_vehiculo($id_usuario, $matricula, $tipo, $id_marca, $color, $numero_plazas) {
-        $this->link->query("CALL sp_registrar_vehiculo($id_usuario, '$matricula', '$tipo', $id_marca, '$color', $numero_plazas)");
+    public function registrar_vehiculo($id_usuario, $matricula, $tipo, $marca, $color, $numero_plazas) {
+        $this->link->query("CALL sp_registrar_vehiculo($id_usuario, '$matricula', '$tipo', $marca, '$color', $numero_plazas)");
     }
 }

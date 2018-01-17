@@ -7,8 +7,8 @@
             </div> 
             <div class="modal-body"> 
                 <div class="form-group">
-                    <input class="topcoat-combo-input" type="text" list="poo" placeholder="Salgo de...">
-                    <datalist id="poo" name="municipio_salida">
+                    <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Salgo de...">
+                    <datalist id="poo1" name="municipio_salida" >
                     </datalist>
 
                     <br><br>

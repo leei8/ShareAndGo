@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    session_start();
+session_start();
 ?>
 <html lang="en">
     <head>
@@ -12,6 +12,12 @@
         <link rel="stylesheet" href="../css/footer.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/combobox_buscador.css">
+        <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
+        <script src="../../js/angular.min.js" type="text/javascript"></script>
+        <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
+        <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
+        <script src="../../js/menu_principal.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="demo">
@@ -42,16 +48,16 @@
         <div class="jumbotron">
             <div class="container text-center">
                 <div class="col-sm-6">
-                <h1>¡Comparte el viaje!</h1>
-                <p style="margin-bottom: 30px; margin-top: 30px">Busca el trayecto que más se adapte a tí o crea una ruta desde el lugar de salida hasta el centro para ayudar a gente que se encuentra en la misma situación que tú.</p>
-                <p>Decide con quien disfrutar del viaje y compartir los gastos del día a día de una manera rápida y cómoda.</p>
+                    <h1>¡Comparte el viaje!</h1>
+                    <p style="margin-bottom: 30px; margin-top: 30px">Busca el trayecto que más se adapte a tí o crea una ruta desde el lugar de salida hasta el centro para ayudar a gente que se encuentra en la misma situación que tú.</p>
+                    <p>Decide con quien disfrutar del viaje y compartir los gastos del día a día de una manera rápida y cómoda.</p>
                 </div>
                 <div class="col-sm-5" style="float:right">
                     <img src="../img/centro_zornotza.jpg" class="img-responsive" style="width:100%; border-radius: 10px" alt="Image">
                 </div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row" style="text-align: center">
                 <div class="col-md-4">
@@ -82,6 +88,7 @@
         </div>
         <?php
         require_once "../multipagina/footer.php";
+        
         ?>
     </body>
 </html>

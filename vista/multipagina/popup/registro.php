@@ -26,9 +26,9 @@
                     <input type="text" class="form-control" id="contrasena" placeholder="Apellido" name="apellido">
                 </div> 
                 <div class="form-group">
-                     <input class="topcoat-combo-input" type="text" list="poo" placeholder="Paso por...">
-                            <datalist id="poo" name="municipio_paso">
-                            </datalist>
+                     <input class="topcoat-combo-input" type="text" list="poo4" placeholder="Salgo de...">
+                    <datalist id="poo4" name="municipio_salida">
+                    </datalist>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono">

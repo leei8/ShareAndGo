@@ -11,7 +11,7 @@ $(document).ready(function () {
                 $.each(midato, function (i, dato) {
                     milista += "<option id=" + dato.id_municipio + ">" + dato.municipio + ", " + dato.provincia + "</option>";
                 });
-                $('datalist[name=municipio_salida]').html(milista);
+                $('datalist[name=municipio_paso]').html(milista);
 //                $('#municipio_paso').html(milista);
                 return false;
             },

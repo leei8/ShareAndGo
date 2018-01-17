@@ -21,8 +21,8 @@
                     <div class="copy-fields hide">
                         <div class="control-group input-group" style="margin-top:10px">
 
-                            <input class="topcoat-combo-input" type="text" list="poo" placeholder="Paso por...">
-                            <datalist id="poo" name="municipio_paso">
+                            <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Paso por...">
+                            <datalist id="poo1" name="municipio_paso">
                             </datalist>
                             <div class="input-group-btn"> 
                                 <button class="btn btn-danger remove" type="button" id="anadir_parada"><i class="glyphicon glyphicon-remove"></i> Borrar</button>
@@ -32,8 +32,8 @@
                     </div>
                 </div>
 
-                <input class="topcoat-combo-input" type="text" list="poo" placeholder="Elige el coche que vayas a utilizar">
-                <datalist id="poo" name="coche">
+                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el coche que vayas a utilizar">
+                <datalist id="poo3" name="coche">
                 </datalist>
 
                 <br>

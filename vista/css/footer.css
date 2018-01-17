@@ -2,3 +2,24 @@ footer {
     background-color: #eee;
     padding: 25px;
 }
+.icono{
+    height: 40px;
+}
+.btn_red_social{
+    margin-top: 15px;
+    float: left;
+}
+
+@keyframes redBox {
+ 0% {
+ transform: rotate(720deg);
+ }
+ 100% {
+ }
+}
+#icono:hover {
+ position: static;
+ -webkit-animation-name: redBox ;
+ -webkit-animation-duration: 5s;
+ -webkit-animation-fill-mode: forwards;
+}

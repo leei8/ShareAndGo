@@ -71,7 +71,6 @@ session_start();
             <li><a data-toggle="tab" href="#menu2">Mis trayectos compartidos</a></li>
             <li><a data-toggle="tab" href="#menu3">Mis vehículos</a></li>
         </ul>
-
         <div class="tab-content tablasPerfil">
             <div id="home" class="tab-pane fade in active">
                 <?php require_once "secciones_mi_perfil/mensajes.php"; ?>
@@ -86,6 +85,7 @@ session_start();
                 <?php require_once "secciones_mi_perfil/coches.php"; ?>
             </div>
         </div>
+    
         <?php
         require_once "../multipagina/footer.php";
         ?>

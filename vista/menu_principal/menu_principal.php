@@ -21,7 +21,7 @@ session_start();
         <link rel="stylesheet" href="../css/combobox_buscador.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+        <script src="../../js/cargar_combo_mis_coches_publicar_trayecto.js" type="text/javascript"></script>
         <script src="../../js/cargar_combos_municipio.js" type="text/javascript"></script>
         <script src="../../js/cargar_combo_marcas.js" type="text/javascript"></script>
         <script src="../../js/jquery-3.2.1.js" type="text/javascript"></script>

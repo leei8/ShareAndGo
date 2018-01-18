@@ -22,6 +22,7 @@ session_start();
         <script src="../../js/angular.min.js" type="text/javascript"></script>
         <script src="../../js/cargar_combo_marcas.js" type="text/javascript"></script>
         <script src="../../js/cargar_tablas_mi_perfil.js" type="text/javascript"></script>
+        <script src="../../js/cargar_combo_mis_coches_publicar_trayecto.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="demo">

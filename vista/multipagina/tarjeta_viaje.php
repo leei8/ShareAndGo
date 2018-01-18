@@ -1,7 +1,83 @@
 <div class="tarjetaViaje" ng-repeat="item in listaTrayectos">
-   <!-- <div id="mapa" class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d46534.551673009046!2d-2.7173421818677883!3d43.20090005954047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0xd4e32f83a8c7c6b%3A0xa858b2d5d7300d7f!2sYurreta!3m2!1d43.176978299999995!2d-2.633813!4m5!1s0xd4e3426975c2913%3A0x404f58273cb9dc0!2sAmorebieta-Echano!3m2!1d43.2204692!2d-2.733068!5e0!3m2!1ses!2ses!4v1515405462954" width="100%" height="25%" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div> --> 
+    <div id="map"></div>
+    <div id="right-panel">
+        <div style="display: none">
+            <b>Waypoints:</b> <br>
+            <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
+            <select multiple id="waypoints">
+            </select>
+        </div>
+    </div>
+    <div id="map"></div>
+    <div id="right-panel">
+        <div style="display: none">
+            <b>Waypoints:</b> <br>
+            <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
+            <select multiple id="waypoints">
+            </select>
+        </div>
+    </div>
+    <script>
+            $(document).ready(function () {
+
+            
+            function initMap() {
+                var directionsService = new google.maps.DirectionsService;
+                var directionsDisplay = new google.maps.DirectionsRenderer;
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 6,
+                    center: {lat: 41.85, lng: -87.65}
+
+                });
+                directionsDisplay.setMap(map);
+
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
+
+            }
+
+            function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+                var waypts = [];
+                var checkboxArray = document.getElementById('waypoints');
+                for (var i = 0; i < checkboxArray.length; i++) {
+                    if (checkboxArray.options[i].selected) {
+                        waypts.push({
+                            location: checkboxArray[i].value,
+                            stopover: true
+                        });
+                    }
+                }
+
+                directionsService.route({
+                    origin: '43.3117, -2.63861',
+                    destination: '43.2261038, -2.7126284',
+                    waypoints: waypts,
+                    optimizeWaypoints: true,
+                    travelMode: 'DRIVING'
+                }, function (response, status) {
+                    if (status === 'OK') {
+                        directionsDisplay.setDirections(response);
+                        var route = response.routes[0];
+                        var summaryPanel = document.getElementById('directions-panel');
+                        summaryPanel.innerHTML = '';
+                        // For each route, display summary information.
+                        for (var i = 0; i < route.legs.length; i++) {
+                            var routeSegment = i + 1;
+                            summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+                                    '</b><br>';
+                            summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+                            summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+                            summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+                        }
+                    } else {
+                        window.alert('Directions request failed due to ' + status);
+                    }
+                });
+            }
+});
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABD69hTgu54mNQzwPoDLawwab2IGcNZ0w&callback=initMap">
+    </script>
     <div id="nombreConductor" >
         <nombreConductor class="nombreExperiencia">
             <nombre class="nombre">{{item.conductor}}</nombre>
@@ -23,7 +99,7 @@
                 <td><div ng-class="{'diaSeleccionado' : item.dias == 'Martes','dia':item.dias != 'Martes'}">M</div></td>
                 <td><div ng-class="{'diaSeleccionado' : item.dias == 'Miercoles','dia':item.dias != 'Miercoles'}">X</div></td>
                 <td><div ng-class="{'diaSeleccionado' : item.dias == 'Jueves','dia':item.dias != 'Jueves'}">J</div></td>
-                <td><div ng-class="{'diaSeleccionado' : item.dias == 'Viernes','dia':item.dias!= 'Viernes'}">V</div></td>
+                <td><div ng-class="{'diaSeleccionado' : item.dias == 'Viernes','dia':item.dias != 'Viernes'}">V</div></td>
             </tr>   
         </table>
     </div>

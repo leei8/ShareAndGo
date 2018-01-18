@@ -16,6 +16,7 @@ if ($datos != null) {
     $_SESSION['fecha_nacimiento'] = strtotime($datos['fecha_nacimiento']);
     $_SESSION['movil'] = $datos['movil'];
     $_SESSION['municipio'] = $datos['municipio'];
+    $_SESSION['id_municipio'] = $datos['id_municipio'];
     $_SESSION['start'] = time();
     $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
     

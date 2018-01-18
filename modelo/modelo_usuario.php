@@ -1,5 +1,4 @@
-<?php
-require_once '../controlador/conector/conector.php';
+<?php require_once '../controlador/conector/conector.php';
 class modelo_usuario{
     private $link;
     private $usuario;
@@ -16,5 +15,11 @@ class modelo_usuario{
         $usuario = mysqli_fetch_array($consulta);
         return $usuario;
     }
-
+    
+     public function modificar_usuario_por_id($id_usuario,$nombre,$apellido,$email,$telefono,$municipio){
+        $consulta=$this->link->query("CALL sp_modificar_datos_usuario('$id_usuario','$nombre','$apellido','$email','$telefono','$municipio')");
+        $usuario = mysqli_fetch_array($consulta);
+        return $usuario;
+    }
+      
 }

@@ -15,8 +15,9 @@ session_start();
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="../css/combobox_buscador.css" rel="stylesheet" type="text/css"/>
+        <script src="../../js/modificar_perfil.js" type="text/javascript"></script>
         <link href="../css/publicar_trayecto.css" rel="stylesheet" type="text/css"/>
-        <script src="../../js/registrar_coche.js" type="text/javascript"></script>
+        <script src="../../js/registrar_vehiculo.js" type="text/javascript"></script>
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
         <script src="../../js/cargar_combos_municipio.js" type="text/javascript"></script>
         <script src="../../js/angular.min.js" type="text/javascript"></script>

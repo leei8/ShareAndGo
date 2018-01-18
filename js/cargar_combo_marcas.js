@@ -1,14 +1,14 @@
-$( document ).ready(function() {
-    $("#registrarcoche").on("click", function (){
+$(document).ready(function () {
+    $("#registrarcoche").on("click", function () {
         cargar_marca_coches();
     });
     function cargar_marca_coches() {
-        
+
         $.ajax({
             type: 'POST',
             dstaType: 'json',
             url: "../../controlador/controlador_combo_marcas.php",
-            
+
             success: function (datos) {
                 midato = JSON.parse(datos)
                 milista = "";

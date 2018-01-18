@@ -6,6 +6,7 @@ class Conectar {
         $usuario = 'root';
         $contrasena = '';
         $tabla = 'shareandgo';
+        
 
         $link = mysqli_connect($localhost, $usuario, $contrasena, $tabla);
         $link->query("SET NAMES 'utf8'");

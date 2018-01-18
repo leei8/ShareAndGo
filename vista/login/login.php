@@ -18,6 +18,7 @@ session_start();
         <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
         <script src="../../js/menu_principal.js" type="text/javascript"></script>
+        <script src="../../js/cargar_combo_registro.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="demo">

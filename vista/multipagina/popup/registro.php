@@ -27,7 +27,7 @@
                         <input type="text" class="form-control" id="contrasena" placeholder="Apellido" name="apellido">
                     </div> 
                     <div class="form-group">
-                        <input id="municipioid" class="topcoat-combo-input" type="text" list="poo2" name="municipio"  placeholder="Salgo de...">
+                        <input id="municipioid" class="topcoat-combo-input" type="text" list="poo2" name="municipio"  placeholder="Soy de...">
                         <datalist id="poo2" name="municipio_registro" >
                         </datalist>
                     </div>

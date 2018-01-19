@@ -42,7 +42,7 @@ session_start();
                         <li>Nombre: <?php echo $_SESSION['nombre']; ?> </li>
                         <li>Apellido: <?php echo $_SESSION['apellido']; ?> </li>
                         <li>Email: <?php echo $_SESSION['email']; ?> </li>
-                        <li>Fecha de nacimiento: <?php echo date('d/m/Y', $_SESSION['fecha_nacimiento']); ?> </li>
+                        <li>Fecha de nacimiento: <?php echo date('d/m/Y', strtotime($_SESSION['fecha_nacimiento'])); ?> </li>
                         <li>Telefono: <?php echo $_SESSION['movil']; ?> </li>
                         <li>Municipio: <?php echo $_SESSION['municipio']; ?> </li>
                     </ul>

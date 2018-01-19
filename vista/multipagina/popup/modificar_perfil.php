@@ -17,7 +17,7 @@
                 <input type="email" class="form-control" id="email" name="email" value="<?php echo $_SESSION['email']; ?>">
                 </div>
                  <div class="form-group">
-                     <input type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo date('d/m/Y', $_SESSION['fecha_nacimiento']); ?>">
+                     <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo $_SESSION['fecha_nacimiento']; ?>">
                 </div>
                 
                  <div class="form-group">

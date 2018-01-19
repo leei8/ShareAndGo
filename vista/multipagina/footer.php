@@ -3,7 +3,21 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-2">
-                    <img src="../img/logo.png" class="" style="height: 100px">
+                    
+                    <?php
+                    
+                    if($_SESSION == true){
+                        
+                    ?>
+                    <a href="../menu_principal/menu_principal.php"><img src="../img/logo.png" class="" style="height: 100px"></a>
+                    
+                    <?php
+                    }else{
+                        ?>
+                   <a href="../login/login.php"><img src="../img/logo.png" class="" style="height: 100px"></a>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <div class="col-sm-2">
 

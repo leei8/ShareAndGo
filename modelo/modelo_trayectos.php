@@ -9,6 +9,7 @@ class modelo_trayecto {
     private $trayectos_creados;
     private $trayectos_compartidos;
     private $coches;
+    private $peticiones;
 
     public function __construct() {
         $this->link = Conectar::conexion();
@@ -16,6 +17,7 @@ class modelo_trayecto {
         $this->trayectos_creados = array();
         $this->trayectos_compartidos = array();
         $this->coches = array();
+        $this->peticiones = array();
     }
 
     public function seleccionar_trayectos_del_usuario($id_usuario) {
@@ -57,5 +59,13 @@ class modelo_trayecto {
         $this->link->close();
         return $this->trayectos;
     }
-
+    public function seleccionar_peticiones_trayecto_del_usuario($id_usuario){
+        $consulta = $this->link->query("CALL sp_mostrar_peticiones_recibidos($id_usuario)");
+        while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
+            $this->peticiones[] = $row;
+        }
+        $consulta->free_result();
+        $this->link->close();
+        return $this->peticiones;
+    }
 }

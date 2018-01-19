@@ -68,14 +68,14 @@ session_start();
         require_once '../multipagina/popup/publicar_trayecto.php';
         ?>
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">Mensajes y peticiones</a></li>
+            <li class="active"><a data-toggle="tab" href="#home">Peticiones</a></li>
             <li><a data-toggle="tab" href="#menu1">Mis trayectos creados</a></li>
             <li><a data-toggle="tab" href="#menu2">Mis trayectos compartidos</a></li>
             <li><a data-toggle="tab" href="#menu3">Mis vehículos</a></li>
         </ul>
         <div class="tab-content tablasPerfil">
             <div id="home" class="tab-pane fade in active">
-                <?php require_once "secciones_mi_perfil/mensajes.php"; ?>
+                <?php require_once "secciones_mi_perfil/peticiones_trayecto.php"; ?>
             </div>
             <div id="menu1" class="tab-pane fade">
                 <?php require_once "secciones_mi_perfil/trayectos_creados.php"; ?>

@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/menu_principal/menu_principal.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/modificar_perfil.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/mi_perfil/mi_perfil.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/controlador/controlador_modificar_usuario.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/modelo/modelo_usuario.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/registro.php</file>
         </group>
     </open-files>
 </project-private>

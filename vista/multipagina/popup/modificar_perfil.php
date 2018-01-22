@@ -29,7 +29,7 @@
                         </datalist>
                     </div>
                     <div class="form-group">
-                        <input id="municipiomodif_id"  class="form-control" type="text" name="municipio_id"  value="<?php echo $_SESSION['id_municipio']; ?>">
+                        <input type='hidden' id="municipiomodif_id"  class="form-control" type="text" name="municipio_id"  value="<?php echo $_SESSION['id_municipio']; ?>">
                     </div>
                  <label>Modificar contraseña:</label>
                    <div class="form-group">

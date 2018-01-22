@@ -17,8 +17,7 @@ class modelo_usuario{
     }
     
      public function modificar_usuario_por_id($id_usuario,$nombre,$apellido,$email,$telefono,$id_municipio,$fecha_nacimiento){
-        $consulta=$this->link->query("CALL sp_modificar_datos_usuario('$id_usuario','$nombre','$apellido','$email','$telefono','$id_municipio','$fecha_nacimiento'");
-        
+        $consulta=$this->link->query("CALL sp_modificar_datos_usuario('$id_usuario','$nombre','$apellido','$email','$telefono','$id_municipio','$fecha_nacimiento')");
     }
       
 }

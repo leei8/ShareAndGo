@@ -28,11 +28,12 @@ session_start();
         <script src="../../js/cargar_combo_marcas.js" type="text/javascript"></script>
         <script src="../../js/jquery-3.2.1.js" type="text/javascript"></script>
         <script src="../../js/menu_principal.js" type="text/javascript"></script>
-
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
         <script src="../../js/registrar_vehiculo.js" type="text/javascript"></script>
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
     </head>
+       
     <body>
         <?php
         require_once "../multipagina/header.php";

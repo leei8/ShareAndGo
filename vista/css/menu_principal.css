@@ -49,21 +49,22 @@
     
 }
 .dias{
-    width: 100%;
+    margin: auto;
 }
 .dias td{
     margin: auto;
     border-radius: 5px;
+    padding: 5px;
 }
 .dia{
-    width: 20px;
+    width: 21px;
     border-style: solid;
     border-width: thin;
     border-radius: 10px;
     background-color: white;
 }
 .diaSeleccionado{
-    width: 20px;
+    width: 21px;
     border-style: solid;
     border-width: thin;
     border-radius: 10px;

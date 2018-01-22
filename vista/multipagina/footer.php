@@ -46,16 +46,16 @@
                 </div>
                 <div class="col-sm-2">
                     <label>Redes sociales</label><br>
-                    <a href="https://facebook.com/" class="btn_red_social">
+                    <a href="https://facebook.com/" class="btn_red_social" target="_blank">
                         <img class="icono" src="../img/icono_facebook.png" alt="" id="icono"/>
                     </a>
-                    <a href="https://www.twitter.com/" class="btn_red_social">
+                    <a href="https://www.twitter.com/" class="btn_red_social" target="_blank">
                         <img class="icono" src="../img/icono_twitter.png" alt="" id="icono"/>
                     </a>
-                    <a href="https://www.instagram.com/" class="btn_red_social">
+                    <a href="https://www.instagram.com/" class="btn_red_social" target="_blank">
                         <img class="icono"src="../img/icono_instagram.png" alt="" id="icono"/>
                     </a>
-                    <a href="https://www.youtube.com/" class="btn_red_social">
+                    <a href="https://www.youtube.com/" class="btn_red_social" target="_blank">
                         <img class="icono"src="../img/icono_youtube.png" alt="" id="icono"/>
                     </a>
                 </div>

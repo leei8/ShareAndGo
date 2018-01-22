@@ -11,7 +11,7 @@ mi_buscador.controller('mainController', ["$scope", "$http", function ($scope, $
 
                 });
 
-                $scope.copia = $scope.listaTrayectos;
-                
-          
+        $scope.copia = $scope.listaTrayectos;
+
+
     }]);

@@ -30,6 +30,12 @@
                     <li><a href="../menu_principal/menu_principal.php"><span class="glyphicon glyphicon-home"></span></a>
                     <li><a href="#" data-toggle="modal" data-target="#publicarViajePopUp"><span class="glyphicon glyphicon-road"></span> Publicar trayecto</a></li>
                     <li><a href="../mi_perfil/mi_perfil.php"><span class="glyphicon glyphicon-user"></span> Mi perfil</a></li>
+                    <li>
+                        <a href="">
+                            <span class="glyphicon glyphicon-bell"></span>
+                            <span class="label label-danger" id="notificacion">0</span>
+                        </a>
+                    </li>
                     <li><a href="../../controlador/controlador_cerrar_sesion.php"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
                 <?php
                 } else {

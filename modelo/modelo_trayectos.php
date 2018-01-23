@@ -60,7 +60,7 @@ class modelo_trayecto {
         return $this->trayectos;
     }
     public function seleccionar_peticiones_trayecto_del_usuario($id_usuario){
-        $consulta = $this->link->query("CALL sp_mostrar_peticiones_recibidos($id_usuario)");
+        $consulta = $this->link->query("CALL sp_mostrar_peticiones_recibidas($id_usuario)");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
             $this->peticiones[] = $row;
         }

@@ -1,4 +1,4 @@
-
+<form method="post" id="formulario">
 <div class="modal fade" id="myModalRegistro" role="dialog"> 
     <div class="modal-dialog modal-lg"> 
         <div class="modal-content"> 
@@ -40,6 +40,4 @@
         </div>
     </div>
 </div>
-
-
-
+</form>

@@ -27,7 +27,7 @@
                 Numero de plazas: <numero id="numeroPlazas" class="plazas">{{item.plazas_disponibles}}</numero>
 
             </div>
-            <button class="w3-button w3-block w3-dark-grey">+ Enviar petición</button>
+            <button id="{{item.id_trayecto}}" class="w3-button w3-block w3-dark-grey">+ Enviar petición</button>
         </div>
     </div>
 </div>

@@ -7,7 +7,6 @@ if(isset ($_SESSION['loggedin'])){
             <th>Coche</th>
             <th>Municipios</th>
             <th>Fecha trayecto</th>
-            <th>Tiempo estimado</th>
             <th>Plazas disponibles</th>
             <th>Ocasional/Frecuente</th>
         </tr>

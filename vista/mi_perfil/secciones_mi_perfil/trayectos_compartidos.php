@@ -9,7 +9,6 @@ if(isset ($_SESSION['loggedin'])){
             <th>Municipios</th>
             <th>Plazas disponibles</th>
             <th>Dias</th>
-            <th>Tiempo estimado</th>
             <th>Ocasional/Fecuente</th>
             <th>Fecha</th>
         </tr>

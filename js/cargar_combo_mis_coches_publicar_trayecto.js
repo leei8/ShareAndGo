@@ -1,6 +1,10 @@
 $(document).ready(function () {
+        
     cargar_mis_coches_publicar_trayecto();
+    
+
     function cargar_mis_coches_publicar_trayecto() {
+        
         $.ajax({
             type: 'POST',
             dstaType: 'json',

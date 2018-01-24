@@ -27,6 +27,7 @@ session_start();
         <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
         <script src="../../js/registrar_vehiculo.js" type="text/javascript"></script>
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
        
     <body>
@@ -35,13 +36,11 @@ session_start();
         ?>
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
-                <input class="topcoat-combo-input-filtro" type="text" id="municipio"list="poo1" placeholder="Salgo de..." ng-model="TEXTOBusqueda">
-                <datalist id="poo1">
-
-                </datalist>
+                <input class="topcoat-combo-input-filtro" type="text"   placeholder="Salgo de..." ng-model="TEXTOBusqueda">
                 
-                <div class="diasBuscador">
-                    <table>
+                
+<!--                <div class="diasBuscador">
+                    <table ng-model="buscarDia">
                         <tr>
                             <td><div class="diaBuscador">L</div></td>
                             <td><div class="diaBuscador">M</div></td>
@@ -50,7 +49,7 @@ session_start();
                             <td><div class="diaBuscador">V</div></td>
                         </tr>   
                     </table>
-                </div> 
+                </div> -->
             </div>
             <div style="text-align: center">
                 <div class="container text-center">

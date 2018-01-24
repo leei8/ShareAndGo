@@ -13,7 +13,7 @@ $(document).ready(function () {
                 midato = JSON.parse(datos)
                 milista = "";
                 $.each(midato, function (i, dato) {
-                    milista += "<option data-value='" + dato.id_municipio + "' value='" + dato.municipio + ', ' + dato.provincia + "'></option>";
+                    milista += "<option data-value='" + dato.id_municipio + "' value='" + dato.municipio + ', '+ dato.provincia +  "'></option>";
                 });
                 $('datalist[name=municipio_modificar]').html(milista);
                 return false;

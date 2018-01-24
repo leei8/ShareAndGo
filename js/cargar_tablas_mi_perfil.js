@@ -12,7 +12,6 @@ $(document).ready(function () {
                             + dato['matricula'] + "</td><td>"
                             + dato['municipios'] + "</td><td>"
                             + dato['fecha_creacion'] + "</td><td>"
-                            + dato['tiempo_estimado'] + "</td><td>"
                             + dato['plazas_disponibles'] + "</td>"
                     if (dato['ocasional'] === 1) {
                         $tipo = "ocasional"
@@ -43,15 +42,14 @@ $(document).ready(function () {
                             + dato['matricula'] + "</td><td>"
                             + dato['municipios'] + "</td><td>"
                             + dato['plazas_disponibles'] + "</td><td>"
-                            + dato['dias'] + "</td><td>"
-                            + dato['tiempo_estimado'] + "</td>";
+                            + dato['dias'] + "</td>";
 
                     if (dato['ocasional'] === 1) {
                         $tipo = "ocasional"
                     } else {
                         $tipo = "frecuente"
                     }
-                    milista += "<td>" + $tipo + "</td><td>"
+                    milista += "<td>" + $tipo + "<td>"
                             + dato['fecha_creacion'] + "</td></tr>";
                 });
                 $('#tabla_trayectos_compartidos').append(milista);

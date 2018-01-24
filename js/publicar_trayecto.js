@@ -11,7 +11,7 @@ $(document).ready(function () {
                 midato = JSON.parse(datos)
                 milista = "";
                 $.each(midato, function (i, dato) {
-                    milista += "<option data-value='" + dato.id_municipio + "' value='" + dato.municipio + ',' + dato.provincia + "'></option>";
+                    milista += "<option data-value='" + dato.id_municipio + "' value='" + dato.municipio + ', '+ dato.provincia +  "'></option>";
                 });
                 if ($('datalist[name=municipio_paso')) {
                     $('datalist[name=municipio_paso]').html(milista);
@@ -67,6 +67,40 @@ $(document).ready(function () {
         insertar_trayecto();
 
     });
+    
+    $("#botonTrayecto").click(function(){
+       
+      
+        $.ajax({
+            type: 'POST',
+            dstaType: 'json',
+            url: "../../controlador/controlador_mis_coches.php",
+            success: function (datos) {
+                midato = JSON.parse(datos)
+                milista = "";
+                $.each(midato, function (i, dato) {
+                    milista += "<option id=" + dato['id_vehiculo'] + " value=" + dato['nombre'] + ',' + dato['matricula'] +  "></option>";
+                });
+                
+                if(milista == ""){
+                 var result = confirm("Para publicar un trayecto, necesitas tener al menos un coche registrado." );
+                 
+                 if (result){
+                     header('Location: ../popup/registrar_coche.php');
+                 } else {
+                  alert('Ha dicho no');
+                 
+                }
+            }
+                return false;
+            },
+            error: function (xhr) {
+                alert("An error occured: " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    });
+
+    
 
 
     function insertar_trayecto() {

@@ -19,7 +19,7 @@ if ($datos != null) {
     $_SESSION['id_municipio'] = $datos['id_municipio'];
     $_SESSION['start'] = time();
     $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
-    
+ 
     header('location: ../vista/menu_principal/menu_principal.php');
 } else {
     echo '<script>alert ("Usuario o contraseña incorrectos");</script>';

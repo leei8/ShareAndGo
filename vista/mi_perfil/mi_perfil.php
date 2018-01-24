@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php
 session_start();
+
+if(isset ($_SESSION['loggedin'])){
+
 ?>
 <html lang="en">
     <head>
@@ -92,6 +95,9 @@ session_start();
     
         <?php
         require_once "../multipagina/footer.php";
+        } else {
+    header('Location: ../login/login.php');
+} 
         ?>
     </body>
 </html>

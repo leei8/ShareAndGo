@@ -21,5 +21,5 @@ $_SESSION['id_municipio'] = $id_municipio;
 
 $cont = new modelo_usuario();
 $cont->modificar_usuario_por_id($id_usuario,$nombre,$apellido,$email,$telefono,$id_municipio,$fecha_nacimiento);
-//require_once '../vista/mi_perfil/mi_perfil.php';
+header('Location: ../vista/mi_perfil/mi_perfil.php');
 ?>

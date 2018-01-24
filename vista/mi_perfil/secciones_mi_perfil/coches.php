@@ -1,3 +1,6 @@
+<?php
+if(isset ($_SESSION['loggedin'])){
+?>
 <div class="tbl-content">
     <table cellpadding="0" cellspacing="0" border="0" id="tabla_mis_coches">
         <tr>
@@ -9,3 +12,9 @@
         
     </table>
 </div>
+<?php
+
+} else {
+    header('Location: ../../login/login.php');
+} 
+?>

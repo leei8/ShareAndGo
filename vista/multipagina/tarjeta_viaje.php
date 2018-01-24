@@ -1,4 +1,4 @@
-<div ng-repeat="item in listaTrayectos">
+<div ng-repeat="item in listaTrayectos |filter:{municipios:TEXTOBusqueda}">
     <div class="w3-container" style="float: left;width:50%;">
         <div class="w3-card-4">
            <header class="w3-container w3-light-grey">

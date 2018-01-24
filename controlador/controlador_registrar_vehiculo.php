@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../modelo/modelo_registrar_vehiculo.php';
+require_once '../modelo/modelo_vehiculos.php';
 
 $id_usuario = $_SESSION['id'];
 $matricula = filter_input(INPUT_POST, 'matricula');

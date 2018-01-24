@@ -1,13 +1,11 @@
 <div ng-repeat="item in listaTrayectos">
     <div class="w3-container" style="float: left;width:50%;">
         <div class="w3-card-4">
-            <header class="w3-container w3-light-grey">
-                <h3>{{item.conductor}}</h3>
-                {{item.municipios}} - Amorebieta
-                <a target="_blank" href="../multipagina/popup/mapa_viaje.php?latitud={{item.latitud}}&longitud={{item.longitud}}" onClick="window.open(this.href, this.target, 'width=350,height=420'); return false;">
-                    
-                    <span class="glyphicon glyphicon-map-marker"></span>
-                </a>
+           <header class="w3-container w3-light-grey">
+                <h3>{{item.municipios}} - Amorebieta <a target="_blank" href="../multipagina/popup/mapa_viaje.php?latitud={{item.latitud}}&longitud={{item.longitud}}" onClick="window.open(this.href, this.target, 'width=350,height=420'); return false;"><span class="glyphicon glyphicon-map-marker"></span><p style="font-size: 12px">Ver</p>
+                    </a> </h3>
+                {{item.conductor}}
+                
             </header>
             <div class="w3-container">
             </div>

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     cargar_combo_municipios();
     function cargar_combo_municipios() {
         $.ajax({
@@ -11,7 +12,13 @@ $(document).ready(function () {
                 $.each(midato, function (i, dato) {
                     milista += "<option id=" + dato.id_municipio + ">" + dato.municipio + ", " + dato.provincia + "</option>";
                 });
-                $('datalist[name=municipio_salida]').html(milista);
+                 if($('datalist[name=municipio_paso')){
+                    $('datalist[name=municipio_paso]').html(milista);
+                }
+                
+                if($('datalist[name=municipio_salida')){
+                    $('datalist[name=municipio_salida]').html(milista);
+                }
                 return false;
             },
             error: function (xhr) {

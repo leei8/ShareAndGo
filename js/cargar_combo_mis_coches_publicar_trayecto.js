@@ -9,7 +9,7 @@ $(document).ready(function () {
                 midato = JSON.parse(datos)
                 milista = "";
                 $.each(midato, function (i, dato) {
-                    milista += "<option id=" + dato['matricula'] + " value=" + dato['matricula'] + ">" + dato['nombre'] + "  -  " + dato['matricula'] + "</option>";
+                    milista += "<option id=" + dato['id_vehiculo'] + " value=" + dato['nombre'] + ',' + dato['matricula'] +  "></option>";
                 });
                 $('#poo3').append(milista);
                 return false;

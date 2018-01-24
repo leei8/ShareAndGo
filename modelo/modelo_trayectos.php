@@ -68,4 +68,75 @@ class modelo_trayecto {
         $this->link->close();
         return $this->peticiones;
     }
+     public function insertar_trayecto($vehiculo_seleccionado, $id_usuario, $municipio_salida, $plazas_disponibles, $tipo_trayecto, $paradas, $dias_seleccionados) {
+      
+        $mysqli = new mysqli("localhost","root","","shareandgo");
+        $mysqli->autocommit(false);
+        $stop = false;
+//        $sql1 = "CALL sp_insertar_trayecto($vehiculo_seleccionado,$id_usuario,$municipio_salida,$plazas_disponibles, $tipo_trayecto)";
+     $sql1 = "SELECT * from usuarios";
+        echo $sql1;
+       $result = $mysqli->query($sql1);
+        echo "$result";
+        
+        if ($mysqli->errno) {
+            $stop = true;
+            echo "Error: " . $mysqli->error . " .";
+        }
+        
+        echo $result;
+//        $sql2 = "SELECT MAX(id_trayecto) from trayectos WHERE id_conductor = $id_usuario";
+//        $result1 = $mysqli->query($sql2);
+//
+//        if ($mysqli->errno) {
+//            $stop = true;
+//            echo "Error: " . $mysqli->error . " .";
+//        }
+//
+//        $row = mysqli_fetch_array($result1);
+//        
+//        print $row[0];
+//        
+//        $sql3 = "CALL sp_insertar_parada_a_trayecto($row[0],$municipio_salida)";
+//        $result2 = $mysqli->query($sql3);
+//        if ($mysqli->errno) {
+//            $stop = true;
+//            echo "Error: " . $mysqli->error . " .";
+//        }
+//        
+//        
+//        $parada = explode(",", $paradas);
+//
+//        for ($i = 0; $i < count($parada); $i++) {
+//            $sql4 = "CALL sp_insertar_parada_a_trayecto($row[0],$parada[$i])";
+//        }
+//
+//
+//        $dia_seleccionado = explode(",", $dias_seleccionados);
+//
+//        for ($j = 0; $j < count($dia_seleccionado); $i++) {
+//            $sql5 = "CALL_sp_insertar_dia_a_trayecto($row[0],'$dia_seleccionado[$j]')";
+//        }
+//        $result3 = $this->link->query($sql4);
+//
+//        if ($this->link->errno) {
+//            $stop = true;
+//            echo "Error: " . $this->link->error . " .";
+//        }
+//
+//        $result4 = $this->link->query($sql5);
+//
+//        if ($this->link->errno) {
+//            $stop = true;
+//            echo "Error: " . $this->link->error . " .";
+//        }
+        if ($stop == false) {
+           $mysqli->commit();
+            echo "Datuak ongi sartu dira";
+        } else {
+            $mysqli->rollback();
+            echo "Ez da daturik sartu datu basean";
+        }
+    }
+
 }

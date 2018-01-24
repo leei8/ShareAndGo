@@ -10,8 +10,6 @@ mi_buscador.controller('mainController', ["$scope", "$http", function ($scope, $
                     $scope.listaTrayectos = response.data;
 
                 });
-
-        $scope.copia = $scope.listaTrayectos;
-
+              
 
     }]);

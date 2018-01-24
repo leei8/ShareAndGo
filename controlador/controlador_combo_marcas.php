@@ -1,6 +1,6 @@
 <?php 
-require_once '../modelo/modelo_marcas_coches.php';
-$cont=new modelo_marcas();
+require_once '../modelo/modelo_vehiculos.php';
+$cont=new modelo_vehiculos();
 $datos=$cont->mostrar_marcas();
 
 $marcas = json_encode($datos);

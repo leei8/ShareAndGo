@@ -7,7 +7,7 @@
             </div> 
             <div class="modal-body"> 
                 <div class="form-group">
-                    <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Salgo de...">
+                    <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Salgo de..." id="municipio_salida">
                     <datalist id="poo1" name="municipio_salida" >
                     </datalist>
 
@@ -18,21 +18,22 @@
                         </div>
                     </div>
                     <!-- Copy Fields-These are the fields which we get through jquery and then add after the above input,-->
+                    
                     <div class="copy-fields hide">
                         <div class="control-group input-group" style="margin-top:10px">
 
-                            <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Paso por...">
+                            <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Paso por..." id="municipio_parada" name="parada">
                             <datalist id="poo1" name="municipio_paso">
                             </datalist>
                             <div class="input-group-btn"> 
-                                <button class="btn btn-danger remove" type="button" id="anadir_parada"><i class="glyphicon glyphicon-remove"></i> Borrar</button>
+                                <button class="btn btn-danger remove" type="button" id="borrar_parada"><i class="glyphicon glyphicon-remove"></i> Borrar</button>
                             </div>
 
                         </div>
                     </div>
                 </div>
 
-                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el coche que vayas a utilizar">
+                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el coche que vayas a utilizar" id="elegir_coche">
                 <datalist id="poo3" name="datalist_coche">
                 </datalist>
 
@@ -51,18 +52,18 @@
                 <div class="panel-default">
                     <div class="checkbox">
                         <h4>Fecha</h4>
-                        <label><input type="checkbox" value="" class="check">Lunes</label>
-                        <label><input type="checkbox" value="" class="check">Martes</label>
-                        <label><input type="checkbox" value="" class="check">Miercoles</label>
-                        <label><input type="checkbox" value="" class="check">Jueves</label>
-                        <label><input type="checkbox" value="" class="check">Viernes</label>
+                        <label><input type="checkbox" id="lunes" value="lunes" class="check" name="dias">Lunes</label>
+                        <label><input type="checkbox" id="martes" value="martes" class="check" name="dias">Martes</label>
+                        <label><input type="checkbox" id="miercoles" value="miercoles" class="check" name="dias">Miercoles</label>
+                        <label><input type="checkbox" id="jueves" value="jueves" class="check" name="dias">Jueves</label>
+                        <label><input type="checkbox" id="viernes" value="viernes" class="check" name="dias">Viernes</label>
                     </div> 
                     <div class="checkbox ">
                         <label><input type="checkbox" value="" id="seleccionartodos">Todos los anteriores</label>
                     </div>
                 </div>    
                 <div class="modal-footer"> 
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Enviar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="insertar_trayecto">Enviar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
                 </div> 
             </div> 

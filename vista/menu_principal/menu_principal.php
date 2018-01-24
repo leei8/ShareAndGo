@@ -35,7 +35,7 @@ session_start();
         ?>
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
-                <input class="topcoat-combo-input-filtro" type="text" id="municipio"list="poo1" placeholder="Salgo de...">
+                <input class="topcoat-combo-input-filtro" type="text" id="municipio"list="poo1" placeholder="Salgo de..." ng-model="TEXTOBusqueda">
                 <datalist id="poo1">
 
                 </datalist>

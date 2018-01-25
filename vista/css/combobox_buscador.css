@@ -45,6 +45,5 @@
 }
 
 .topcoat-combo-input:invalid {
-  border: 1px solid #ec514e;
+  border: 1px solid #ccc;
 }
-/*aa*/

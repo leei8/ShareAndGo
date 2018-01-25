@@ -28,7 +28,7 @@
                 ?>
                 <li><p class="nombreUsuario"><?php echo "Hola, " . $_SESSION['nombre'] . " " . $_SESSION['apellido']; ?></p></li>
                     <li><a href="../menu_principal/menu_principal.php"><span class="glyphicon glyphicon-home"></span></a>
-                    <li><a id="comprobarvehiculo" href="#" data-toggle="modal" data-target="#publicarViajePopUp"><span class="glyphicon glyphicon-road"></span> Publicar trayecto</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#publicarViajePopUp"><span class="glyphicon glyphicon-road"></span> Publicar trayecto</a></li>
                     <li><a href="../mi_perfil/mi_perfil.php"><span class="glyphicon glyphicon-user"></span> Mi perfil</a></li>
                     <li>
                         <a href="">
@@ -52,5 +52,6 @@
     require_once 'popup/registro.php';
     require_once 'popup/login.php';
     require_once 'popup/publicar_trayecto.php';
-    ?>
+    
+        ?>
 </nav>

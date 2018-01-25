@@ -10,11 +10,11 @@
                 <div class="modal-body"> 
                     <div class="form-group"> 
                         
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email"> 
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required> 
                     </div> 
                     <div class="form-group"> 
                        
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                     </div>
                 </div> 
                 <div class="modal-footer"> 

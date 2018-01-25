@@ -27,7 +27,7 @@ session_start();
         <script src="../../js/cargar_datos_filtro.js" type="text/javascript"></script>
         <script src="../../js/registrar_vehiculo.js" type="text/javascript"></script>
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js%22%3E"></script>
     </head>
        
     <body>

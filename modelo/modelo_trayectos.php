@@ -29,7 +29,7 @@ class modelo_trayecto {
         $this->link->close();
         return $this->trayectos_compartidos;
     }
-    
+
     public function seleccionar_coches_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_mostrar_vehiculos_usuario('$id_usuario')");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -39,7 +39,7 @@ class modelo_trayecto {
         $this->link->close();
         return $this->coches;
     }
-    
+
     public function seleccionar_trayectos_creados_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_trayectos_creados_usuario('$id_usuario')");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -49,7 +49,7 @@ class modelo_trayecto {
         $this->link->close();
         return $this->trayectos_creados;
     }
-    
+
     public function mostrar_todos_trayectos() {
         $consulta = $this->link->query("CALL sp_mostrar_todos_trayectos()");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -59,7 +59,8 @@ class modelo_trayecto {
         $this->link->close();
         return $this->trayectos;
     }
-    public function seleccionar_peticiones_trayecto_del_usuario($id_usuario){
+
+    public function seleccionar_peticiones_trayecto_del_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_mostrar_peticiones_recibidas($id_usuario)");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
             $this->peticiones[] = $row;
@@ -68,23 +69,30 @@ class modelo_trayecto {
         $this->link->close();
         return $this->peticiones;
     }
-     public function insertar_trayecto($vehiculo_seleccionado, $id_usuario, $municipio_salida, $plazas_disponibles, $tipo_trayecto, $paradas, $dias_seleccionados) {
-      
+
+    public function insertar_trayecto($vehiculo_seleccionado, $id_usuario, $municipio_salida, $plazas_disponibles, $tipo_trayecto) {
+
+        echo $id_usuario . "<br>";
+        echo $municipio_salida . "<br>";
+
+        echo $vehiculo_seleccionado . "<br>";
+        echo $plazas_disponibles . "<br>";
+        echo $tipo_trayecto . "<br>";
+       
+
         $mysqli = new mysqli("localhost","root","","shareandgo");
         $mysqli->autocommit(false);
         $stop = false;
-//        $sql1 = "CALL sp_insertar_trayecto($vehiculo_seleccionado,$id_usuario,$municipio_salida,$plazas_disponibles, $tipo_trayecto)";
-     $sql1 = "SELECT * from usuarios";
+        $sql1 = "INSERT INTO trayectos (`id_vehiculo`,`id_conductor`,`id_municipio_salida`,`fecha_creacion`,`plazas_disponibles`,`ocasional`) VALUES ($vehiculo_seleccionado,$id_usuario,$municipio_salida CURRENT_DATE(),$plazas_disponibles,$tipo_trayecto);";
+        
         echo $sql1;
        $result = $mysqli->query($sql1);
-        echo "$result";
+        
         
         if ($mysqli->errno) {
             $stop = true;
             echo "Error: " . $mysqli->error . " .";
         }
-        
-        echo $result;
 //        $sql2 = "SELECT MAX(id_trayecto) from trayectos WHERE id_conductor = $id_usuario";
 //        $result1 = $mysqli->query($sql2);
 //
@@ -97,12 +105,12 @@ class modelo_trayecto {
 //        
 //        print $row[0];
 //        
-//        $sql3 = "CALL sp_insertar_parada_a_trayecto($row[0],$municipio_salida)";
-//        $result2 = $mysqli->query($sql3);
-//        if ($mysqli->errno) {
-//            $stop = true;
-//            echo "Error: " . $mysqli->error . " .";
-//        }
+        $sql3 = "INSERT INTO `comunidades`(`id_comunidad`, `comunidad`) VALUES (102,'AGOBIO')";
+        $result2 = $mysqli->query($sql3);
+        if ($mysqli->errno) {
+            $stop = true;
+            echo "Error: " . $mysqli->error . " .";
+        }
 //        
 //        
 //        $parada = explode(",", $paradas);

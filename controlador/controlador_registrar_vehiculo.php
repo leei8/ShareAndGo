@@ -8,7 +8,7 @@ $marca = filter_input(INPUT_POST, 'marca');
 $tipo = filter_input(INPUT_POST, 'tipo');
 $plazas = filter_input(INPUT_POST, 'plazas');
 $color = filter_input(INPUT_POST, 'color');
-$cont = new modelo_registro_vehiculo();
+$cont = new modelo_vehiculos();
 
 $cont->registrar_vehiculo($id_usuario, $matricula, $tipo, $marca, $color, $plazas);
 

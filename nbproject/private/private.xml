@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>js/cargar_datos_filtro.js</url>
+            <bookmark id="1">
+                <name/>
+                <line>12</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/shareandgo_v1/vista/multipagina/popup/registrar_coche.php</file>
-            <file>file:/C:/xampp/htdocs/shareandgo_v1/js/comprobaciones.js</file>
-            <file>file:/C:/xampp/htdocs/shareandgo_v1/vista/mi_perfil/mi_perfil.php</file>
-            <file>file:/C:/xampp/htdocs/shareandgo_v1/vista/menu_principal/menu_principal.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

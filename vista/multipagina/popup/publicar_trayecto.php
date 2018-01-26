@@ -7,7 +7,7 @@
             </div> 
             <div class="modal-body"> 
                 <div class="form-group">
-                    <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Salgo de..." id="municipio_salida">
+                    <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Salgo de..." maxlength="50" id="municipio_salida" required>
                     <datalist id="poo1" name="municipio_salida" >
                     </datalist>
 
@@ -22,7 +22,7 @@
                     <div class="copy-fields hide">
                         <div class="control-group input-group" style="margin-top:10px">
 
-                            <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Paso por..." id="municipio_parada" name="parada">
+                            <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Paso por..." maxlength="50" id="municipio_parada" name="parada">
                             <datalist id="poo1" name="municipio_paso">
                             </datalist>
                             <div class="input-group-btn"> 
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el vehículo a utilizar" id="elegir_coche">
+                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el vehículo a utilizar" id="elegir_coche" required>
                 <datalist id="poo3" name="datalist_coche">
                 </datalist>
 
@@ -42,7 +42,7 @@
 
                 <div class="panel-default">
                     <div>
-                    <input type="text" class="form-control" id="plazasdipo" placeholder="Nº de plazas disponibles">
+                    <input type="text" class="form-control" id="plazasdipo" maxlength="1" placeholder="Nº de plazas disponibles" required>
                     </div>
                      <input type="hidden" id="fecha_actual"/>
                 </div>
@@ -54,7 +54,7 @@
                     <label class="radio-inline">
                         <input type="radio" name="Tipo" value=0>Frecuente
                     </label><br/>
-                    <div class="checkbox">
+                    <div class="checkbox" >
                         <h5>Elige los días:</h5>
                         <label><input type="checkbox" id="lunes" value="Lunes" class="check" name="dias">Lunes</label>
                         <label><input type="checkbox" id="martes" value="Martes" class="check" name="dias">Martes</label>

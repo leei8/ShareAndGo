@@ -8,23 +8,23 @@
                 <label>Modificar datos personales:</label>
                  
                  <div class="form-group"> 
-                     <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $_SESSION['nombre']; ?>" required>
+                     <input type="text" class="form-control" id="nombre" name="nombre" maxlength="50" value="<?php echo $_SESSION['nombre']; ?>" required>
                  </div>
                  <div class="form-group">
-                <input type="text" class="form-control" id="apellido" name="apellido" value="<?php echo $_SESSION['apellido']; ?>" required>
+                <input type="text" class="form-control" id="apellido" name="apellido" maxlength="50" value="<?php echo $_SESSION['apellido']; ?>" required>
                 </div>
                  <div class="form-group">
-                <input type="email" class="form-control" id="email" name="email" value="<?php echo $_SESSION['email']; ?>" required>
+                <input type="email" class="form-control" id="email" name="email" maxlength="50" value="<?php echo $_SESSION['email']; ?>" required>
                 </div>
                  <div class="form-group">
                      <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo $_SESSION['fecha_nacimiento']; ?>" required>
                 </div>
                 
                  <div class="form-group">
-                <input type="text" class="form-control" id="telefono" name="telefono" value="<?php echo $_SESSION['movil']; ?>" required>
+                     <input type="text" class="form-control" id="telefono" name="telefono" maxlength="9" minlength="9" value="<?php echo $_SESSION['movil']; ?>" required>
                  </div>
                     <div class="form-group">
-                        <input id="municipiomodif"  class="topcoat-combo-input form-control" type="text" list="poo1" name="municipio"  value="<?php echo $_SESSION['municipio']; ?>" required>
+                        <input id="municipiomodif"  class="topcoat-combo-input form-control" type="text" list="poo1" name="municipio" maxlength="50" value="<?php echo $_SESSION['municipio']; ?>" required>
                         <datalist id="poo1" name="municipio_modificar" >
                         </datalist>
                     </div>
@@ -33,10 +33,10 @@
                     </div>
                  <label>Modificar contraseña:</label>
                    <div class="form-group">
-                <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Nueva contraseña">
+                <input type="password" class="form-control" id="contrasena" name="contrasena" maxlength="255" placeholder="Nueva contraseña">
                  </div>
                 <div class="form-group">
-                <input type="password" class="form-control" id="contrasena" placeholder="Repetir nueva contraseña">
+                <input type="password" class="form-control" id="contrasena" maxlength="255" placeholder="Repetir nueva contraseña">
                  </div>
                 
                 <div class="modal-footer"> 

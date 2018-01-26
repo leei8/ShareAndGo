@@ -37,7 +37,7 @@ if(isset ($_SESSION['loggedin'])){
         ?>
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
-                <input class="topcoat-combo-input-filtro" type="text"   placeholder="Salgo de..." ng-model="TEXTOBusqueda">
+                <input class="topcoat-combo-input-filtro" type="text"  maxlength="50" placeholder="Salgo de..." ng-model="TEXTOBusqueda">
 
             </div>
             <div style="text-align: center">

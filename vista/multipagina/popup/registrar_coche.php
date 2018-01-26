@@ -8,7 +8,7 @@
                 <div class="modal-body">
                     <form method="POST" action="">
                      <div class="form-group"> 
-                    <input type="text" class="form-control" id="matricula" placeholder="Matricula" required>
+                    <input type="text" class="form-control" id="matricula" placeholder="Matricula"  required>
                 </div>
 
                         <div class="form-group">

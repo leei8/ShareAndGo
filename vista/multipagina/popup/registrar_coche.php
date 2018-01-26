@@ -38,8 +38,11 @@
                 <button type="submit" class="btn btn-default" data-dismiss="modal" id="registrar_vehiculo">Enviar</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
             </div> 
-                </form>
+                              </form>
                 </div>
+                    
         </div>
     </div>
 </div>
+    
+       

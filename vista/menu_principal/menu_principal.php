@@ -37,26 +37,12 @@ session_start();
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
                 <input class="topcoat-combo-input-filtro" type="text"   placeholder="Salgo de..." ng-model="TEXTOBusqueda">
-                
-                
-<!--                <div class="diasBuscador">
-                    <table ng-model="buscarDia">
-                        <tr>
-                            <td><div class="diaBuscador">L</div></td>
-                            <td><div class="diaBuscador">M</div></td>
-                            <td><div class="diaBuscador">X</div></td>
-                            <td><div class="diaBuscador">J</div></td>
-                            <td><div class="diaBuscador">V</div></td>
-                        </tr>   
-                    </table>
-                </div> -->
+
             </div>
             <div style="text-align: center">
                 <div class="container text-center">
                     <div class="row" ng-controller="mainController">
-                        <!-- FALTA PONER FOREACH -->
                         <?php include ('../multipagina/tarjeta_viaje.php'); ?>
-                        <!-- ------------------- -->
                     </div>
                 </div>
             </div>

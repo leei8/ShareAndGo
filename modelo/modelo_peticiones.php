@@ -1,4 +1,5 @@
 <?php
+
 require_once '../controlador/conector/conector.php';
 class modelo_peticiones{
     private $link;
@@ -16,4 +17,5 @@ class modelo_peticiones{
         $this->link->query("CALL sp_rechazar_peticion ($id_peticion)");
     }
 }
-//aa
+  
+    ?>

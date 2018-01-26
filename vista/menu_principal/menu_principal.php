@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
+if(isset ($_SESSION['loggedin'])){
 ?>
 <html ng-app="mi_buscador">
     <head>
@@ -69,11 +70,15 @@ session_start();
         </div>
         <?php
         require_once "../multipagina/popup/registrar_coche.php";
+        
         ?>
     </div>
 
     <?php
     require_once "../multipagina/footer.php";
+    } else {
+    header('Location: ../login/login.php');
+} 
     ?>
 </body>
 </html>

@@ -23,12 +23,13 @@
                 Numero de plazas: <numero id="numeroPlazas" class="plazas">{{item.plazas_disponibles}}</numero>
 
             </div>
-            <div ng-class="{'sin_plazas' : item.plazas_disponibles === '0'}">
+           
+        </div>
+         <div ng-class="{'sin_plazas' : item.plazas_disponibles === '0'}">
                 <form action="../../controlador/controlador_enviar_peticion.php" method="POST">
                     <input type="text" id="id_trayecto" name="id_trayecto" value="{{item.id_trayecto}}" hidden="">
                     <input name="boton" type="submit" class="w3-button w3-block w3-dark-grey" value="+ Enviar petición">
                 </form>
             </div>
-        </div>
     </div>
 </div>

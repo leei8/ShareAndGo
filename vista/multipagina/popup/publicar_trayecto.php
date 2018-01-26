@@ -33,28 +33,29 @@
                     </div>
                 </div>
 
-                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el coche que vayas a utilizar" id="elegir_coche">
+                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el vehículo a utilizar" id="elegir_coche">
                 <datalist id="poo3" name="datalist_coche">
                 </datalist>
 
                 <br>
+                <br>
 
                 <div class="panel-default">
-                    <label>Nº plazas disponibles:</label><br> 
-                    <input type="text" class="form-control" id="plazasdipo">
-                    
+                    <div>
+                    <input type="text" class="form-control" id="plazasdipo" placeholder="Nº de plazas disponibles">
+                    </div>
                      <input type="hidden" id="fecha_actual"/>
-                    
-                    <label class="radio-inline">
-                        <input type="radio" name="Tipo" value=1>Ocasional
-                    </label><br />
-                    <label class="radio-inline">
-                        <input type="radio" name="Tipo" value=2>Frecuente
-                    </label><hr />
                 </div>
                 <div class="panel-default">
+                    <h5>Tipo de trayecto:</h5>
+                    <label class="radio-inline">
+                        <input type="radio" name="Tipo" value=1>Ocasional
+                    </label><br/>
+                    <label class="radio-inline">
+                        <input type="radio" name="Tipo" value=0>Frecuente
+                    </label><br/>
                     <div class="checkbox">
-                        <h4>Fecha</h4>
+                        <h5>Elige los días:</h5>
                         <label><input type="checkbox" id="lunes" value="Lunes" class="check" name="dias">Lunes</label>
                         <label><input type="checkbox" id="martes" value="Martes" class="check" name="dias">Martes</label>
                         <label><input type="checkbox" id="miercoles" value="Miercoles" class="check" name="dias">Miercoles</label>

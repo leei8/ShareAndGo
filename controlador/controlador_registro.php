@@ -1,11 +1,10 @@
 <?php 
 require_once '../modelo/modelo_registro.php';
-require_once '../modelo/modelo_usuario.php';
-//$correo=$_POST[''];
+
 $emailUsuario = filter_input(INPUT_POST,'email');
 $contrasenaUsuario = filter_input(INPUT_POST,'contrasena');
-$options = ['cost'=>12];
-$passwordEncripted=password_hash($contrasenaUsuario, PASSWORD_BCRYPT,$options);
+$options= ['cost'=>12];
+$passwordEncripted= password_hash($password, PASSWORD_BCRYPT,$options);
 $nombreUsuario = filter_input(INPUT_POST,'nombre');
 $apellidoUsuario = filter_input(INPUT_POST,'apellido');
 $municipioregistro= filter_input(INPUT_POST,'municipioid');

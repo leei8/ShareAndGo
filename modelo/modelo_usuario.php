@@ -8,7 +8,7 @@ class modelo_usuario {
     private $usuario;
     private $coches;
     private $usuario_email;
-  
+
     public function __construct() {
         $this->link = Conectar::conexion();
         $this->usuario = array();
@@ -22,21 +22,20 @@ class modelo_usuario {
     }
 
         public function comprobar_login_encriptado($emailUsuario, $contrasena) {
-     
+
         $query = "SELECT * FROM usuarios WHERE email='" . $emailUsuario . "'";
         $result = $this->link->query($query);
-        echo $emailUsuario;
-        echo $contrasena;
+
         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
             $passwordEncripted = $row['contrasena'];
-            echo $row['contrasena'];
+
         }
 
         if ($dato_necesario = password_verify($contrasena, $passwordEncripted)) {
             echo'Pasahitza asmatu da, Ongi etorri';
             return $dato_necesario;
-            echo $dato_necesario;
+
         } else {
             echo 'Pasahitza OKERRA, saiatu berriz';
         }
@@ -51,5 +50,8 @@ class modelo_usuario {
         $this->usuario_email = mysqli_fetch_array($consulta);
         return $this->usuario_email;
     }
+    public function modificar_contrasena_usuario($id_usuario,$contrasena){
+       $consulta=$this->link->query("CALL sp_modificar_contrasena_usuario($id_usuario,'$contrasena')");
+   }
 
 }

@@ -1,13 +1,10 @@
-.tarjetaViaje{
-    border-style: solid;
-    border-width: thin;
-    border-radius: 10px;
-    padding: 10px;
-    width: 49%;
-    margin: 5px;
-    float: left;
-    border-color: #8b8b8b;
-    background-color: #f8f8f8;
+.w3-card-4{
+  height: 200px;
+  max-height: 250px;
+  margin-top: 30px;
+}
+.w3-block{
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5), 0 4px 20px 0 rgba(0,0,0,0.30);
 }
 .row{
     margin: auto;
@@ -166,10 +163,10 @@
     font-size:25px;
     overflow:hidden;
     display:table;
-    margin:20px auto;
+    margin: auto;
     margin-top: -20px;
     margin-bottom: 40px;
-    margin-left: 250px;
+    width: 50%;
     border-radius:5px;
     background:transparent;
     box-shadow: 1px 1px #fefefe, inset 1px 1px #fefefe;

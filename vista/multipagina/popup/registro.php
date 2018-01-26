@@ -10,23 +10,23 @@
                 <div class="modal-body">
                     <label>Datos de cuenta</label>   
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" maxlength="50" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" required>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" maxlength="300" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena2" placeholder="Confirma tu ontraseña" required>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Confirma tu ontraseña" maxlength="300" required>
                     </div>
                     <label>Datos personales</label>  
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" maxlength="50" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="contrasena" placeholder="Apellido" name="apellido" required>
+                        <input type="text" class="form-control" id="contrasena" placeholder="Apellido" name="apellido" maxlength="50" required>
                     </div> 
                     <div class="form-group">
-                        <input id="municipioid" class="topcoat-combo-input" type="text" list="poo2" name="municipio"  placeholder="Soy de..." required>
+                        <input id="municipioid" class="topcoat-combo-input" type="text" list="poo2" name="municipio"  placeholder="Soy de..." maxlength="50" required>
                         <datalist id="poo2" name="municipio_registro" >
                         </datalist>
                     </div>
@@ -34,7 +34,7 @@
                         <input type="text" class="form-control" id="municipioidregistro"  name="municipioid" value="">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono" onkeypress="return soloNumeros(event)">
+                        <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono" maxlength="9" minlength="9" onkeypress="return soloNumeros(event)">
                     </div>
                     <div class="form-group">
                         <label for="fecha_nacimiento">Fecha de nacimiento:</label>

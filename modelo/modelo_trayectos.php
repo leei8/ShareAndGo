@@ -154,7 +154,7 @@ class modelo_trayecto {
 
     public function insertar_enviar_trayecto($id_trayecto, $id_usuario){
         $this->link->query("CALL sp_insertar_peticion($id_trayecto, $id_usuario)");
-    }
-
-    
+    }  
 }
+
+    ?>

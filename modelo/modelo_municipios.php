@@ -1,4 +1,5 @@
 <?php
+
 require_once '../controlador/conector/conector.php';
 class modelo_municipios{
     private $link;
@@ -18,4 +19,4 @@ class modelo_municipios{
         return $this->municipios;
     }
 }
-//aa
+?>

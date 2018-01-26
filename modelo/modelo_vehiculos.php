@@ -1,4 +1,5 @@
 <?php
+
 require_once '../controlador/conector/conector.php';
 
 class modelo_vehiculos {
@@ -21,3 +22,4 @@ class modelo_vehiculos {
         $this->link->query("CALL sp_registrar_vehiculo($id_usuario, '$matricula', '$tipo', $marca, '$color', $numero_plazas)");
     }
 }
+?>

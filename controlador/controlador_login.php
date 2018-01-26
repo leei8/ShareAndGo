@@ -5,10 +5,13 @@ $emailUsuario = filter_input(INPUT_POST, 'email');
 $contrasena = filter_input(INPUT_POST, 'contrasena');
 
 $cont = new modelo_usuario();
+
 $comprobacion_encrip = $cont->comprobar_login_encriptado($emailUsuario, $contrasena);
 $datos = $cont->recoger_datos_usuario($emailUsuario);
 if ($comprobacion_encrip != null) {
-    
+
+    //Se recogen los datos del usuario logueado y se meten en sesión.Iniciar sesión y el tiempo de este.
+
     $_SESSION['loggedin'] = true;
     $_SESSION['id'] = $datos['id_usuario'];
     $_SESSION['email'] = $datos['email'];

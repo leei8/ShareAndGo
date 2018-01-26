@@ -31,7 +31,7 @@
                     <li><a href="#" data-toggle="modal" data-target="#publicarViajePopUp"><span class="glyphicon glyphicon-road"></span> Publicar trayecto</a></li>
                     <li><a href="../mi_perfil/mi_perfil.php"><span class="glyphicon glyphicon-user"></span> Mi perfil</a></li>
                     <li>
-                        <a href="">
+                        <a href="../mi_perfil/mi_perfil.php">
                             <span class="glyphicon glyphicon-bell"></span>
                             <span class="label label-danger" id="notificacion">0</span>
                         </a>

@@ -10,6 +10,7 @@ $fecha_nacimiento = (filter_input(INPUT_POST,'fecha_nacimiento'));
 $telefono = filter_input(INPUT_POST,'telefono');
 $municipio= filter_input(INPUT_POST,'municipio');
 $id_municipio= filter_input(INPUT_POST,'municipio_id');
+$nueva_contrasena = filter_input(INPUT_POST, 'contrasena');
 
 $_SESSION['nombre'] = $nombre;
 $_SESSION['apellido'] = $apellido;
@@ -20,6 +21,13 @@ $_SESSION['municipio'] = $municipio;
 $_SESSION['id_municipio'] = $id_municipio;
 
 $cont = new modelo_usuario();
-$cont->modificar_usuario_por_id($id_usuario,$nombre,$apellido,$email,$telefono,$id_municipio,$fecha_nacimiento);
+if ($nueva_contrasena != '') {
+    $options = ['cost' => 12];
+    $contraseña_encriptada = password_hash($nueva_contrasena, PASSWORD_BCRYPT, $options);
+ 
+    $cont->modificar_contrasena_usuario($id_usuario, $contraseña_encriptada);
+}
+$cont->modificar_usuario_por_id($id_usuario, $nombre, $apellido, $email, $telefono, $id_municipio, $fecha_nacimiento);
+
 header('Location: ../vista/mi_perfil/mi_perfil.php');
 ?>

@@ -33,7 +33,7 @@
                     </div>
                  <label>Modificar contraseña:</label>
                    <div class="form-group">
-                <input type="password" class="form-control" id="contrasena" placeholder="Nueva contraseña">
+                <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Nueva contraseña">
                  </div>
                 <div class="form-group">
                 <input type="password" class="form-control" id="contrasena" placeholder="Repetir nueva contraseña">

@@ -32,11 +32,11 @@
                         <div class="form-group"> 
                             <input type="text" class="form-control" id="plazas" placeholder="Plazas disponibles" required>
                         </div>
-               <button type="submit"  id="registrar_vehiculo">Enviar</button>
+              
                 </form>
                 </div>
                 <div class="modal-footer"> 
-                    
+                     <button type="submit"  class="btn btn-default" data-dismiss="modal" id="registrar_vehiculo">Enviar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
                 </div> 
                 

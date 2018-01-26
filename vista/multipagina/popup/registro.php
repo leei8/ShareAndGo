@@ -16,7 +16,7 @@
                         <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena" placeholder="Confirma tu ontraseña" required>
+                        <input type="password" class="form-control" id="contrasena2" placeholder="Confirma tu ontraseña" required>
                     </div>
                     <label>Datos personales</label>  
                     <div class="form-group">

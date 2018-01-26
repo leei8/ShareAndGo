@@ -5,9 +5,10 @@ $emailUsuario = filter_input(INPUT_POST, 'email');
 $contrasena = filter_input(INPUT_POST, 'contrasena');
 
 $cont = new modelo_usuario();
-$datos = $cont->comprobar_login($emailUsuario, $contrasena);
-
-if ($datos != null) {
+$comprobacion_encrip = $cont->comprobar_login_encriptado($emailUsuario, $contrasena);
+$datos = $cont->recoger_datos_usuario($emailUsuario);
+if ($comprobacion_encrip != null) {
+    
     $_SESSION['loggedin'] = true;
     $_SESSION['id'] = $datos['id_usuario'];
     $_SESSION['email'] = $datos['email'];
@@ -19,7 +20,7 @@ if ($datos != null) {
     $_SESSION['id_municipio'] = $datos['id_municipio'];
     $_SESSION['start'] = time();
     $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
-  
+ 
     header('location: ../vista/menu_principal/menu_principal.php');
 } else {
     echo '<script>alert ("Usuario o contraseña incorrectos");</script>';

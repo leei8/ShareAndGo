@@ -20,6 +20,7 @@ session_start();
         <script src="../../js/menu_principal.js" type="text/javascript"></script>
         <script src="../../js/cargar_combo_registro.js" type="text/javascript"></script>
         <script src="../../js/validar_campos.js" type="text/javascript"></script>
+       
 
     </head>
     <body>

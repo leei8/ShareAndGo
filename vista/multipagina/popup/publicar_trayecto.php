@@ -42,6 +42,9 @@
                 <div class="panel-default">
                     <label>Nº plazas disponibles:</label><br> 
                     <input type="text" class="form-control" id="plazasdipo">
+                    
+                     <input type="hidden" id="fecha_actual"/>
+                    
                     <label class="radio-inline">
                         <input type="radio" name="Tipo" value=1>Ocasional
                     </label><br />
@@ -52,11 +55,11 @@
                 <div class="panel-default">
                     <div class="checkbox">
                         <h4>Fecha</h4>
-                        <label><input type="checkbox" id="lunes" value="lunes" class="check" name="dias">Lunes</label>
-                        <label><input type="checkbox" id="martes" value="martes" class="check" name="dias">Martes</label>
-                        <label><input type="checkbox" id="miercoles" value="miercoles" class="check" name="dias">Miercoles</label>
-                        <label><input type="checkbox" id="jueves" value="jueves" class="check" name="dias">Jueves</label>
-                        <label><input type="checkbox" id="viernes" value="viernes" class="check" name="dias">Viernes</label>
+                        <label><input type="checkbox" id="lunes" value="Lunes" class="check" name="dias">Lunes</label>
+                        <label><input type="checkbox" id="martes" value="Martes" class="check" name="dias">Martes</label>
+                        <label><input type="checkbox" id="miercoles" value="Miercoles" class="check" name="dias">Miercoles</label>
+                        <label><input type="checkbox" id="jueves" value="Jueves" class="check" name="dias">Jueves</label>
+                        <label><input type="checkbox" id="viernes" value="Viernes" class="check" name="dias">Viernes</label>
                     </div> 
                     <div class="checkbox ">
                         <label><input type="checkbox" value="" id="seleccionartodos">Todos los anteriores</label>
@@ -70,3 +73,5 @@
         </div> 
     </div>
 </div>
+
+

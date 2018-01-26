@@ -103,8 +103,8 @@ $(document).ready(function () {
                     if (dato['estado'] === 'aceptado') {
                         milista += "<td></td>";
                     } else {
-                        milista += "<td><a href='#'><span class='glyphicon glyphicon-ok-sign btn-lg' ></span></a>\n\
-                            <a href='#'><span class='glyphicon glyphicon-remove-sign btn-lg'></span></a></td>";
+                        milista += "<td><a href='../../controlador/controlador_respuesta_peticion.php?respuesta=true&id_peticion=" + dato['id_peticion'] + "&id_trayecto=" + dato['id_trayecto'] + "'><span class='glyphicon glyphicon-ok-sign btn-lg' ></span></a>\n\
+                            <a href='../../controlador/controlador_respuesta_peticion.php?respuesta=false&id_peticion=" + dato['id_peticion'] + "&id_trayecto=" + dato['id_trayecto'] + "'><span class='glyphicon glyphicon-remove-sign btn-lg'></span></a></td>";
                     }
                 });
                 $('#tabla_peticiones_trayecto').append(milista);
@@ -115,6 +115,7 @@ $(document).ready(function () {
             }
         });
     }
+
 
     cargar_mis_peticiones();
     cargar_tabla_trayectos_creados();

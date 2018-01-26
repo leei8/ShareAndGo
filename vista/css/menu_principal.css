@@ -92,6 +92,12 @@
     text-align: center;
     margin-top: 15px;
 }
+.sin_plazas{
+    cursor: not-allowed;
+    opacity: 0.65; 
+    pointer-events:none;
+}
+
 .tipoSeleccionado{
     border-width: thin;
     border-style: solid;

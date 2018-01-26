@@ -70,76 +70,81 @@ class modelo_trayecto {
         return $this->peticiones;
     }
 
-    public function insertar_trayecto($vehiculo_seleccionado, $id_usuario, $municipio_salida, $plazas_disponibles, $tipo_trayecto) {
+    public function insertar_trayecto($vehiculo_seleccionado, $id_usuario, $municipio_salida, $new_format, $plazas_disponibles, $tipo_trayecto, $paradas, $dias_seleccionados) {
 
         echo $id_usuario . "<br>";
         echo $municipio_salida . "<br>";
-
+        echo $new_format . "<br>";
         echo $vehiculo_seleccionado . "<br>";
         echo $plazas_disponibles . "<br>";
         echo $tipo_trayecto . "<br>";
-       
+        echo $paradas . "<br>";
 
-        $mysqli = new mysqli("localhost","root","","shareandgo");
+        $mysqli = new mysqli("localhost", "root", "", "shareandgo");
         $mysqli->autocommit(false);
         $stop = false;
-        $sql1 = "INSERT INTO trayectos (`id_vehiculo`,`id_conductor`,`id_municipio_salida`,`fecha_creacion`,`plazas_disponibles`,`ocasional`) VALUES ($vehiculo_seleccionado,$id_usuario,$municipio_salida CURRENT_DATE(),$plazas_disponibles,$tipo_trayecto);";
-        
+        $sql1 = "INSERT INTO trayectos (`id_vehiculo`,`id_conductor`,`id_municipio_salida`,`fecha_creacion`,`plazas_disponibles`,`ocasional`) VALUES ($vehiculo_seleccionado,$id_usuario,$municipio_salida,'$new_format',$plazas_disponibles,$tipo_trayecto);";
+
         echo $sql1;
-       $result = $mysqli->query($sql1);
-        
-        
+        $result1 = $mysqli->query($sql1);
+
+
         if ($mysqli->errno) {
             $stop = true;
             echo "Error: " . $mysqli->error . " .";
         }
-//        $sql2 = "SELECT MAX(id_trayecto) from trayectos WHERE id_conductor = $id_usuario";
-//        $result1 = $mysqli->query($sql2);
-//
-//        if ($mysqli->errno) {
-//            $stop = true;
-//            echo "Error: " . $mysqli->error . " .";
-//        }
-//
-//        $row = mysqli_fetch_array($result1);
-//        
-//        print $row[0];
-//        
-        $sql3 = "INSERT INTO `comunidades`(`id_comunidad`, `comunidad`) VALUES (102,'AGOBIO')";
-        $result2 = $mysqli->query($sql3);
+        $sql2 = "SELECT MAX(id_trayecto) from trayectos WHERE id_conductor = $id_usuario";
+        $result2 = $mysqli->query($sql2);
+
+
+        $row = mysqli_fetch_array($result2);
+
+        $id_trayecto_transacc = $row[0];
         if ($mysqli->errno) {
             $stop = true;
             echo "Error: " . $mysqli->error . " .";
         }
-//        
-//        
-//        $parada = explode(",", $paradas);
-//
-//        for ($i = 0; $i < count($parada); $i++) {
-//            $sql4 = "CALL sp_insertar_parada_a_trayecto($row[0],$parada[$i])";
-//        }
-//
-//
-//        $dia_seleccionado = explode(",", $dias_seleccionados);
-//
-//        for ($j = 0; $j < count($dia_seleccionado); $i++) {
-//            $sql5 = "CALL_sp_insertar_dia_a_trayecto($row[0],'$dia_seleccionado[$j]')";
-//        }
-//        $result3 = $this->link->query($sql4);
-//
-//        if ($this->link->errno) {
-//            $stop = true;
-//            echo "Error: " . $this->link->error . " .";
-//        }
-//
-//        $result4 = $this->link->query($sql5);
-//
-//        if ($this->link->errno) {
-//            $stop = true;
-//            echo "Error: " . $this->link->error . " .";
-//        }
+
+        $paradas = substr($paradas, 0, -1);
+        $parada = explode(',', $paradas);
+
+
+        for ($i = 0; $i < count($parada); $i++) {
+            echo $parada[$i];
+            $sql3 = "INSERT INTO `municipios_trayectos`(`id_trayecto`, `id_municipio`) VALUES ($id_trayecto_transacc,$parada[$i])";
+
+            echo $sql3;
+            $result3 = $mysqli->query($sql3);
+            if ($mysqli->errno) {
+                $stop = true;
+                echo "Error: " . $mysqli->error . " .";
+            }
+        }
+
+        $sql4 = "INSERT INTO `municipios_trayectos`(`id_trayecto`, `id_municipio`) VALUES ($id_trayecto_transacc,$municipio_salida)";
+        echo $sql4;
+        $result4 = $mysqli->query($sql4);
+        if ($mysqli->errno) {
+            $stop = true;
+            echo "Error: " . $mysqli->error . " .";
+        }
+
+        $dia_seleccionado = explode(",", $dias_seleccionados);
+
+        for ($j = 0; $j < count($dia_seleccionado); $j++) {
+            echo $dia_seleccionado[$j];
+            $sql5 = "INSERT INTO `trayectos_dias`(`id_trayecto`, `dia`) VALUES ($id_trayecto_transacc,'$dia_seleccionado[$j]');";
+            echo $sql5;
+            $result5 = $mysqli->query($sql5);
+
+            if ($mysqli->errno) {
+                $stop = true;
+                echo "Error: " . $mysqli > error . " .";
+            }
+        }
+
         if ($stop == false) {
-           $mysqli->commit();
+            $mysqli->commit();
             echo "Datuak ongi sartu dira";
         } else {
             $mysqli->rollback();
@@ -147,4 +152,9 @@ class modelo_trayecto {
         }
     }
 
+    public function insertar_enviar_trayecto($id_trayecto, $id_usuario){
+        $this->link->query("CALL sp_insertar_peticion($id_trayecto, $id_usuario)");
+    }
+
+    
 }

@@ -141,8 +141,10 @@ $(document).ready(function () {
 
 
         });
+        
+        var fecha_actual  = $("#fecha_actual").val();
 
-        var json = "submit=&municipio_salida=" + id_municipio_salida + "&paradas=" + paradas + "&coche=" + vehiculo_seleccionado + "&plazas_disponibles=" + $("#plazasdipo").val() + "&tipo_trayecto=" + $("input[name='Tipo']").val() + "&dias_seleccionados=" + dias_seleccionados;
+        var json = "submit=&municipio_salida=" + id_municipio_salida + "&paradas=" + paradas + "&coche=" + vehiculo_seleccionado + "&plazas_disponibles=" + $("#plazasdipo").val() + "&tipo_trayecto=" + $("input[name='Tipo']").val() + "&dias_seleccionados=" + dias_seleccionados + "&fecha_actual=" + fecha_actual;
 
         alert(json);
 
@@ -161,4 +163,16 @@ $(document).ready(function () {
         })
         esconder();
     }
+    
+    
+    var d = new Date();
+
+var month = d.getMonth()+1;
+var day = d.getDate();
+
+var output = d.getFullYear() + '-' +
+    (month<10 ? '0' : '') + month + '-' +
+(day<10 ? '0' : '') + day;
+
+$("#fecha_actual").val(output);
 });

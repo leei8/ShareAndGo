@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+<form role="form" method="POST" action="../../controlador/controlador_registro.php" onsubmit="return validarInfo()">
+=======
 <form role="form" method="POST" action="../../controlador/controlador_registro.php" onsubmit="return validar_telefono()">
+>>>>>>> origin/master
     <div id="registroPopUp" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -35,7 +39,11 @@
                         <input type="text" class="form-control" id="municipioidregistro"  name="municipioid" value="">
                     </div>
                     <div class="form-group">
+<<<<<<< HEAD
+                        <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono" onkeypress="return soloNumeros(event)">
+=======
                         <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono" required>
+>>>>>>> origin/master
                     </div>
                     <div class="form-group">
                         <label for="fecha_nacimiento">Fecha de nacimiento:</label>

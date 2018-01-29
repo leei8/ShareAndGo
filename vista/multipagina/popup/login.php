@@ -10,7 +10,7 @@
                 <div class="modal-body"> 
                     <div class="form-group"> 
                         
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" maxlength="50" onkeypress="return comprobar_arroba(event)" required> 
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" maxlength="50" onkeypress="return comprobar_arroba(this.value,event)" required> 
                     </div> 
                     <div class="form-group"> 
                        

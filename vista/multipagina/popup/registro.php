@@ -1,4 +1,4 @@
-<form role="form" name="f1" method="POST" action="../../controlador/controlador_registro.php">
+<form role="form" name="form_registro" method="POST" action="../../controlador/controlador_registro.php">
     <div id="registroPopUp" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -10,13 +10,13 @@
                 <div class="modal-body">
                     <label>Datos de cuenta</label>   
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" maxlength="50" onkeypress="return comprobar_arroba(event)" required>
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" maxlength="50" onkeypress="return comprobar_arroba(this.value,event)" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" maxlength="255" minlength="8"required>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" maxlength="50" minlength="8" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena2" placeholder="Confirma tu ontraseña" name="contrasena2" minlength="8" onchange="return comprobar_contrasena()"required>
+                        <input type="password" class="form-control" id="contrasena2" placeholder="Confirma tu ontraseña" name="contrasena2" maxlength="50" minlength="8" required>
                     </div>
                     <label>Datos personales</label>  
                     <div class="form-group">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-default" >Enviar</button>
+                    <button type="submit" class="btn btn-default" onclick="return validar_informacion_registro()">Enviar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                 </div>
             </div>

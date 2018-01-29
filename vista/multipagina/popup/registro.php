@@ -1,4 +1,4 @@
-<form role="form" method="POST" action="../../controlador/controlador_registro.php" onsubmit="return validarInfo()">
+<form role="form" name="f1" method="POST" action="../../controlador/controlador_registro.php">
     <div id="registroPopUp" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -10,23 +10,23 @@
                 <div class="modal-body">
                     <label>Datos de cuenta</label>   
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" maxlength="50" required>
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" maxlength="50" onkeypress="return comprobar_arroba(event)" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" maxlength="300" required>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" maxlength="255" minlength="8"required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena" placeholder="Confirma tu ontraseña" maxlength="300" required>
+                        <input type="password" class="form-control" id="contrasena2" placeholder="Confirma tu ontraseña" name="contrasena2" minlength="8" onchange="return comprobar_contrasena()"required>
                     </div>
                     <label>Datos personales</label>  
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" maxlength="50" required>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" maxlength="50" onkeypress="return solo_letras(event)" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="contrasena" placeholder="Apellido" name="apellido" maxlength="50" required>
+                        <input type="text" class="form-control" id="contrasena" placeholder="Apellido" name="apellido" maxlength="50" onkeypress="return solo_letras(event)" required>
                     </div> 
                     <div class="form-group">
-                        <input id="municipioid" class="topcoat-combo-input" type="text" list="poo2" name="municipio"  placeholder="Soy de..." maxlength="50" required>
+                        <input id="municipioid" class="topcoat-combo-input" type="text" list="poo2" name="municipio"  placeholder="Soy de..." maxlength="50" onkeypress="return solo_letras(event)" required>
                         <datalist id="poo2" name="municipio_registro" >
                         </datalist>
                     </div>
@@ -34,10 +34,10 @@
                         <input type="text" class="form-control" id="municipioidregistro"  name="municipioid" value="">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono" maxlength="9" minlength="9" onkeypress="return soloNumeros(event)">
+                        <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono" maxlength="9" minlength="9" onkeypress="return solo_numeros(event)">
                     </div>
                     <div class="form-group">
-                        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
                         <input type="date" class="form-control" id="fecha_nacimiento" placeholder="Fecha de nacimiento" name="fecha" required>
                     </div>
                 </div>

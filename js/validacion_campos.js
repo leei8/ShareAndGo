@@ -1,14 +1,3 @@
-function validar_largura_50(valor) {
-	var valor = document.valor.value;
-
-	if (valor.length > 50 || valor.length < 0) {
-		alert("Este campo acepta un máximo de 50 caracteres.");
-		return false;
-	} else {
-		return true;
-	}
-}
-
 function solo_letras(e) {
 	key = e.keyCode || e.which;
 	tecla = String.fromCharCode(key).toString();
@@ -23,7 +12,6 @@ function solo_letras(e) {
 	}
 
 	if (letras.indexOf(tecla) == -1 && !tecla_especial) {
-		alert('Tecla no aceptada');
 		return false;
 	}
 }
@@ -44,25 +32,4 @@ function solo_numeros(e) {
 		return false;
 	}
 }
-function validar_email() {
-	var correo = document.getElement
-	if (/\w+\@\w+\.\w+/.test(correo)) { // comprobar que el correo cumpla el
-										// formato.
-		alert('Correo correcto.');
-		return true;
-	} else {
-		alert('Correo incorrecto');
-		return false;
-	}
-}
 
-function validar_telefono(telefono){
-	var telefono = document.getElementById("telefono").value;
-	
-	if(telefono.length < 9 || telefono.length > 9){
-		alert("Introduce 9 dígitos.");
-		return false;
-	}else{
-		return true;
-	}
-}

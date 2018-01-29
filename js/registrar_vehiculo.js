@@ -17,7 +17,6 @@ $(document).ready(function () {
             dstaType: 'json',
             url: "../../controlador/controlador_registrar_vehiculo.php",
             success: function (datos) {
-                alert("Se ha insertado con exito")
                 
             },
             error: function (xhr) {

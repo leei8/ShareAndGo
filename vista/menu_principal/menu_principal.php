@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 session_start();
 if(isset ($_SESSION['loggedin'])){
@@ -18,7 +17,6 @@ if(isset ($_SESSION['loggedin'])){
         <link rel="stylesheet" href="../css/publicar_trayecto.css">
         <link rel="stylesheet" href="../css/mi_perfil.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
         <script src="../../js/cargar_combo_mis_coches_publicar_trayecto.js" type="text/javascript"></script>
         <script src="../../js/cargar_combos_municipio.js" type="text/javascript"></script>
         <script src="../../js/cargar_combo_marcas.js" type="text/javascript"></script>
@@ -29,6 +27,7 @@ if(isset ($_SESSION['loggedin'])){
         <script src="../../js/registrar_vehiculo.js" type="text/javascript"></script>
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../../js/validacion_campos.js" type="text/javascript"></script>
     </head>
        
     <body>
@@ -37,7 +36,7 @@ if(isset ($_SESSION['loggedin'])){
         ?>
         <div class="jumbotron" style="margin-bottom: -30px">
             <div class="container text-center">
-                <input class="topcoat-combo-input-filtro" type="text"  maxlength="50" placeholder="Salgo de..." ng-model="TEXTOBusqueda">
+                <input class="topcoat-combo-input-filtro" type="text"  maxlength="50" onkeypress="return solo_letras(event)" placeholder="Salgo de..." ng-model="TEXTOBusqueda">
 
             </div>
             <div style="text-align: center">

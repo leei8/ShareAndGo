@@ -2,6 +2,7 @@
 session_start();
 require_once '../modelo/modelo_vehiculos.php';
 
+//Registro de vehículo, se recogen datos del formulario
 $id_usuario = $_SESSION['id'];
 $matricula = filter_input(INPUT_POST, 'matricula');
 $marca = filter_input(INPUT_POST, 'marca');

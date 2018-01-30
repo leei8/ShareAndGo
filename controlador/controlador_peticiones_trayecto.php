@@ -4,8 +4,7 @@ require_once '../modelo/modelo_trayectos.php';
 
 $id_usuario = $_SESSION['id'];
 
-
-
+//Se recogen las peticiones que el usuario ha recibido.
 $cont = new modelo_trayecto();
 $datos = $cont->seleccionar_peticiones_trayecto_del_usuario($id_usuario);
 $peticiones_trayecto_del_usuario = json_encode($datos);

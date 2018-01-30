@@ -10,6 +10,7 @@ class modelo_municipios{
         $this->municipios=array();
     }
     
+    //Se recogen todos los municipios de la comunidad o provincia seleccionada
     public function cargar_municipios($id_comunidad, $id_provincia){
         $consulta=$this->link->query("CALL sp_mostrar_municipios_comunidad ($id_comunidad, '$id_provincia')");
         while($filas=$consulta->fetch_assoc()){

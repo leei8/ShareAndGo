@@ -20,6 +20,7 @@ class modelo_trayecto {
         $this->peticiones = array();
     }
 
+    //Se recogen los trayectos en los que el usuario participa
     public function seleccionar_trayectos_del_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_trayectos_compartidos_usuario_con_nombre('$id_usuario')");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -29,7 +30,7 @@ class modelo_trayecto {
         $this->link->close();
         return $this->trayectos_compartidos;
     }
-
+    //Se recogen los vehiculos registrados del usuario
     public function seleccionar_coches_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_mostrar_vehiculos_usuario('$id_usuario')");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -39,7 +40,7 @@ class modelo_trayecto {
         $this->link->close();
         return $this->coches;
     }
-
+    //Se recogen los trayectos en los que el usuario es el conductor
     public function seleccionar_trayectos_creados_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_trayectos_creados_usuario('$id_usuario')");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -49,7 +50,7 @@ class modelo_trayecto {
         $this->link->close();
         return $this->trayectos_creados;
     }
-
+    //Se muestran todos los trayectos que existen en la BBDD
     public function mostrar_todos_trayectos() {
         $consulta = $this->link->query("CALL sp_mostrar_todos_trayectos()");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -59,7 +60,7 @@ class modelo_trayecto {
         $this->link->close();
         return $this->trayectos;
     }
-
+    //Se muestran las peticiones recibidas del usuario
     public function seleccionar_peticiones_trayecto_del_usuario($id_usuario) {
         $consulta = $this->link->query("CALL sp_mostrar_peticiones_recibidas($id_usuario)");
         while ($row = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
@@ -69,16 +70,13 @@ class modelo_trayecto {
         $this->link->close();
         return $this->peticiones;
     }
-
+    
+    // TRANSACCION. SI ALGUNA DE LAS SENTENCIAS GENERA ERROR, ROLLBACK Y NO SE HACE NINGUNA DE LAS FUNCIONES
+    // Para insertar un trayecto, hay que insertar datos generales en tabla trayectos, después, seleccionamos la id del mismo trayecto
+    // introducido (el último) e insertamos datos en las tablas que unen los trayectos con los municipios por los que pasa y los dias
+    // en los que se realiza ese trayecto. Ambos últimos llegan en un array que hay que seccionar.
+    
     public function insertar_trayecto($vehiculo_seleccionado, $id_usuario, $municipio_salida, $new_format, $plazas_disponibles, $tipo_trayecto, $paradas, $dias_seleccionados) {
-
-        echo $id_usuario . "<br>";
-        echo $municipio_salida . "<br>";
-        echo $new_format . "<br>";
-        echo $vehiculo_seleccionado . "<br>";
-        echo $plazas_disponibles . "<br>";
-        echo $tipo_trayecto . "<br>";
-        echo $paradas . "<br>";
 
         $mysqli = new mysqli("localhost", "root", "", "shareandgo");
         $mysqli->autocommit(false);
@@ -93,6 +91,7 @@ class modelo_trayecto {
             $stop = true;
             echo "Error: " . $mysqli->error . " .";
         }
+        
         $sql2 = "SELECT MAX(id_trayecto) from trayectos WHERE id_conductor = $id_usuario";
         $result2 = $mysqli->query($sql2);
 
@@ -151,7 +150,7 @@ class modelo_trayecto {
             echo "Ez da daturik sartu datu basean";
         }
     }
-
+    //La petición se acepta finalmente
     public function insertar_enviar_trayecto($id_trayecto, $id_usuario){
         $this->link->query("CALL sp_insertar_peticion($id_trayecto, $id_usuario)");
     }  

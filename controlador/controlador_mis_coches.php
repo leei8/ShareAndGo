@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+//Se cargan los vehiculos que sean del usuario de la sesión
 require_once '../modelo/modelo_trayectos.php';
 
 $id_usuario = $_SESSION['id'];

@@ -13,17 +13,17 @@
                         <input type="email" class="form-control" id="email" placeholder="Email" name="email" maxlength="50" onkeypress="return comprobar_arroba(this.value,event)" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" name="contrasena" maxlength="50" minlength="8" required>
+                        <input type="password" class="form-control" id="contrasena_registro" placeholder="Contraseña" name="contrasena_registro" maxlength="50" minlength="8" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="contrasena2" placeholder="Confirma tu ontraseña" name="contrasena2" maxlength="50" minlength="8" required>
+                        <input type="password" class="form-control" id="contrasena_registro2" placeholder="Confirma tu ontraseña" name="contrasena_registro2" maxlength="50" minlength="8" required>
                     </div>
                     <label>Datos personales</label>  
                     <div class="form-group">
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" maxlength="50" onkeypress="return solo_letras(event)" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="contrasena" placeholder="Apellido" name="apellido" maxlength="50" onkeypress="return solo_letras(event)" required>
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido" maxlength="50" onkeypress="return solo_letras(event)" required>
                     </div> 
                     <div class="form-group">
                         <input id="municipioid" class="topcoat-combo-input" type="text" list="poo2" name="municipio"  placeholder="Soy de..." maxlength="50" onkeypress="return solo_letras(event)" required>

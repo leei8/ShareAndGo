@@ -2,6 +2,7 @@
 session_start();
 require_once '../modelo/modelo_trayectos.php';
 
+//Se recogen los trayectos que el usuario ha creado
 $id_usuario = $_SESSION['id'];
 
 $cont = new modelo_trayecto();

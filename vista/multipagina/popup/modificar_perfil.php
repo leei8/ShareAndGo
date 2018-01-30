@@ -33,10 +33,10 @@
                     </div>
                  <label>Modificar contraseña:</label>
                    <div class="form-group">
-                       <input type="password" class="form-control" id="contrasena_modificar" name="contrasena" maxlength="50" minlength="8" placeholder="Nueva contraseña" value="">
+                       <input type="password" class="form-control" id="contrasena_modificar" name="contrasena_modificar" maxlength="50" minlength="8" placeholder="Nueva contraseña" value="">
                  </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="contrasena_modificar2" maxlength="50" minlength="8" placeholder="Repetir nueva contraseña" value="">
+                    <input type="password" class="form-control" id="contrasena_modificar2" name="contrasena_modificar2" maxlength="50" minlength="8" placeholder="Repetir nueva contraseña" value="">
                  </div>
                 
                 <div class="modal-footer"> 

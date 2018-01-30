@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once '../modelo/modelo_trayectos.php';
 
+//Se recogen todos los trayectos en los que el usuario participa
+require_once '../modelo/modelo_trayectos.php';
 $id_usuario = $_SESSION['id'];
 
 $cont = new modelo_trayecto();

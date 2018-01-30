@@ -1,5 +1,6 @@
 <?php
 
+//Se recoge la respuesta del usuario a las peticiones recibidas
 $respuesta = $_GET['respuesta'];
 $id_peticion = $_GET['id_peticion'];
 $id_trayecto = $_GET['id_trayecto'];

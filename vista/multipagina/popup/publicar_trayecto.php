@@ -7,7 +7,7 @@
             </div> 
             <div class="modal-body"> 
                 <div class="form-group">
-                    <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Salgo de..." maxlength="50" id="municipio_salida" required>
+                    <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Salgo de..." maxlength="50" id="municipio_salida" onkeypress="return solo_letras(event)" required>
                     <datalist id="poo1" name="municipio_salida" >
                     </datalist>
 
@@ -22,7 +22,7 @@
                     <div class="copy-fields hide">
                         <div class="control-group input-group" style="margin-top:10px">
 
-                            <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Paso por..." maxlength="50" id="municipio_parada" name="parada">
+                            <input class="topcoat-combo-input" type="text" list="poo1" placeholder="Paso por..." maxlength="50" onkeypress="return solo_letras(event)" id="municipio_parada" name="parada">
                             <datalist id="poo1" name="municipio_paso">
                             </datalist>
                             <div class="input-group-btn"> 
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el vehículo a utilizar" id="elegir_coche" required>
+                <input class="topcoat-combo-input" type="text" list="poo3" maxlength="50" placeholder="Elige el vehículo a utilizar" id="elegir_coche" required>
                 <datalist id="poo3" name="datalist_coche">
                 </datalist>
 
@@ -42,7 +42,7 @@
 
                 <div class="panel-default">
                     <div>
-                    <input type="text" class="form-control" id="plazasdipo" maxlength="1" placeholder="Nº de plazas disponibles" required>
+                        <input type="text" class="form-control" id="plazasdipo" maxlength="1" minlength="1" placeholder="Nº de plazas disponibles" onkeypress="return solo_numeros(event)"required>
                     </div>
                      <input type="hidden" id="fecha_actual"/>
                 </div>

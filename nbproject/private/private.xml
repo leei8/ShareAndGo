@@ -5,13 +5,12 @@
         <group>
             <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/modificar_perfil.php</file>
             <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/mi_perfil/mi_perfil.php</file>
-            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/menu_principal/menu_principal.php</file>
-            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/controlador/controlador_modificar_usuario.php</file>
-            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/mapa_viaje.php</file>
-            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/controlador/controlador_login.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/js/cargar_combos_municipio.js</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/js/modificar_perfil.js</file>
             <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/publicar_trayecto.php</file>
-            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/controlador/controlador_registro.php</file>
             <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/login.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/registro.php</file>
+            <file>file:/C:/xampp/htdocs/ShareAndGo_v1/js/validacion_campos.js</file>
             <file>file:/C:/xampp/htdocs/ShareAndGo_v1/vista/multipagina/popup/registrar_coche.php</file>
         </group>
     </open-files>

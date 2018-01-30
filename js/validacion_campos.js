@@ -127,13 +127,22 @@ function comprobar_municipio_modificar() {
     }
 }
 
-function comprobar_fecha(){
-alert (value);
-var getdate = new Date(value);
-var curDate = new Date();
-
-alert(getdate - curDate === 0);
-alert(getdate - curDate < 0);
-alert(getdate - curDate > 0);
-
-}
+//function comprobar_fecha(fecha){
+//
+//    var fecha_metida = document.getElementById('escondido').innerHTML;
+// 
+//    alert(fecha_metida)
+//
+//    var hoy = new Date().toISOString().slice(0,10);
+//
+//       alert(hoy);
+//
+//
+//    if(fecha_metida > hoy){
+//        alert("si vienes del futuro")
+//        return false;
+//    }else{
+//        alert("ok")
+//        return true;
+//    }
+//}

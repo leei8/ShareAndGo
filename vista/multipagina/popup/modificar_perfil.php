@@ -17,7 +17,8 @@
                 </div>
                  <div class="form-group">
                      <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo $_SESSION['fecha_nacimiento']; ?>" required>
-                </div>
+                        <!--<span id="escondido" style="display:none"></span>-->
+                 </div>
                 
                  <div class="form-group">
                      <input type="text" class="form-control" id="telefono" name="telefono" maxlength="9" minlength="9" value="<?php echo $_SESSION['movil']; ?>" required onkeypress="return solo_numeros(event)">

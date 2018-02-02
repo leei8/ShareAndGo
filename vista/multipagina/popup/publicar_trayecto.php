@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <input class="topcoat-combo-input" type="text" list="poo3" maxlength="50" placeholder="Elige el vehículo a utilizar" id="elegir_coche" required>
+                <input class="topcoat-combo-input" type="text" list="poo3" placeholder="Elige el vehículo a utilizar" id="elegir_coche" required>
                 <datalist id="poo3" name="datalist_coche">
                 </datalist>
 

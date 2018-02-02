@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-
+    //Recoge los municipios de la BBDD.
     cargar_combo_municipios();
-    //$("#municipiomodif_id").hide();
+   
     function cargar_combo_municipios() {
 
         $.ajax({
@@ -23,7 +23,7 @@ $(document).ready(function () {
             }
         });
     }
-
+    //Recoge ID del municipio metido.
     $("#municipiomodif").change(function () {
         var value = $("#municipiomodif").val();
 

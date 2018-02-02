@@ -11,14 +11,14 @@ $fecha_nacimiento = (filter_input(INPUT_POST,'fecha_nacimiento'));
 $telefono = filter_input(INPUT_POST,'telefono');
 $municipio= filter_input(INPUT_POST,'municipio');
 $id_municipio= filter_input(INPUT_POST,'municipio_id');
-$nueva_contrasena = filter_input(INPUT_POST, 'contrasena');
+$nueva_contrasena = filter_input(INPUT_POST, 'contrasena_modificar');
 
 //Por si hubiera algún dato cambiado, se insertan de nuevo en la sesión
 $_SESSION['nombre'] = $nombre;
 $_SESSION['apellido'] = $apellido;
 $_SESSION['email'] = $email;
 $_SESSION['fecha_nacimiento'] = $fecha_nacimiento;
-$_SESSION['telefono'] = $telefono;
+$_SESSION['movil'] = $telefono;
 $_SESSION['municipio'] = $municipio;
 $_SESSION['id_municipio'] = $id_municipio;
 

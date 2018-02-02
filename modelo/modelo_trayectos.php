@@ -103,10 +103,10 @@ class modelo_trayecto {
             $stop = true;
             echo "Error: " . $mysqli->error . " .";
         }
-
+        if($paradas){
         $paradas = substr($paradas, 0, -1);
         $parada = explode(',', $paradas);
-
+        
 
         for ($i = 0; $i < count($parada); $i++) {
             echo $parada[$i];
@@ -119,7 +119,7 @@ class modelo_trayecto {
                 echo "Error: " . $mysqli->error . " .";
             }
         }
-
+        }
         $sql4 = "INSERT INTO `municipios_trayectos`(`id_trayecto`, `id_municipio`) VALUES ($id_trayecto_transacc,$municipio_salida)";
         echo $sql4;
         $result4 = $mysqli->query($sql4);

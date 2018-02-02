@@ -1,3 +1,4 @@
+//Se recogen todos los municipios de la base de datos.
 $(document).ready(function () {
     
     cargar_combo_municipios();

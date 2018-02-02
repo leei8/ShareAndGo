@@ -16,6 +16,7 @@ if(isset ($_SESSION['loggedin'])){
         <link rel="stylesheet" href="../css/combobox_buscador.css">
         <link rel="stylesheet" href="../css/publicar_trayecto.css">
         <link rel="stylesheet" href="../css/mi_perfil.css">
+         <link href="../css/combobox_buscador.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../../js/cargar_combo_mis_coches_publicar_trayecto.js" type="text/javascript"></script>
         <script src="../../js/cargar_combos_municipio.js" type="text/javascript"></script>
@@ -28,6 +29,7 @@ if(isset ($_SESSION['loggedin'])){
         <script src="../../js/publicar_trayecto.js" type="text/javascript"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="../../js/validacion_campos.js" type="text/javascript"></script>
+        
     </head>
        
     <body>

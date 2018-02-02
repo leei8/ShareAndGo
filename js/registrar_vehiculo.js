@@ -6,6 +6,7 @@ $(document).ready(function () {
     });
     function registrar_coche() {
 
+        //Recoge la marca y con ello, su id.
         var value = $("#marca_vehiculo").val();
 
         var id_marca = $('#marca [value="' + value + '"]').attr('data-value');

@@ -1,8 +1,8 @@
+//Se recogen los coches de cada usuario de la BBDD.
 $(document).ready(function () {
         
     cargar_mis_coches_publicar_trayecto();
     
-
     function cargar_mis_coches_publicar_trayecto() {
         
         $.ajax({
@@ -13,7 +13,7 @@ $(document).ready(function () {
                 midato = JSON.parse(datos)
                 milista = "";
                 $.each(midato, function (i, dato) {
-                    milista += "<option id=" + dato['id_vehiculo'] + " value=" + dato['nombre'] + ',' + dato['matricula'] +  "></option>";
+                    milista += "<option id='" + dato['id_vehiculo'] + "' value='" + dato['nombre'] + "," + dato['matricula'] + "'></option>";
                 });
                 $('#poo3').append(milista);
                 return false;

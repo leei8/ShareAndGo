@@ -4,7 +4,7 @@
 }
 .topcoat-combo-input {
   line-height: 100%;
-  font-size: 1.0;
+  font-size: 14px;
   letter-spacing: 0;
   padding: 0.563rem;
   border: 1px solid #9daca9;
@@ -22,7 +22,7 @@
   border-radius: 5px; 
   border: solid; 
   border-width: thin; 
-  height: 30px;
+  height: 38px;
 }
 
 .topcoat-combo-input:focus {

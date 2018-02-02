@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //Recoge los datos de la BBDD y los saca en una tabla.
     function cargar_tabla_trayectos_creados() {
         $.ajax({
             type: 'POST',
@@ -83,7 +84,7 @@ $(document).ready(function () {
             }
         });
     }
-    //TODOOOOOOOO
+   
     function cargar_mis_peticiones() {
         $.ajax({
             type: 'POST',
@@ -95,7 +96,7 @@ $(document).ready(function () {
                 $.each(midato, function (i, dato) {
                     milista += "<tr><td>"
                             + dato['fecha'] + "</td><td>"
-                            + dato['nombre'] + "</td><td>"
+                            + dato['remitente'] + "</td><td>"
                             + dato['matricula'] + "</td><td>"
                             + dato['municipios'] + "</td><td>"
                             + dato['dias'] + "</td><td>"

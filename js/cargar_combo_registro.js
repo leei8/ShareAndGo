@@ -1,3 +1,4 @@
+//Se recogen todos los municipios de la base de datos para el registro del usuario.
 $(document).ready(function () {
     cargar_combo_municipios();
     $("#municipioidregistro").hide();
@@ -21,8 +22,8 @@ $(document).ready(function () {
             }
         });
     }
-
-    $("#municipioid").change(function () {
+    //Recoge el id del municipio metido.
+    $("#municipioid").change(function () {      
         var value = $("#municipioid").val();
       
         var id_municipio = $('#poo2 [value="' + value + '"]').attr('data-value');

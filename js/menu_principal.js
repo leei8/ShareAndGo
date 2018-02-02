@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    $(".diaBuscador").click(function () {
-
-        $(this).toggleClass("diaBuscadorSeleccionado");
-    });
-    
+    //Modifica la campana de notificación en el header si hay peticiones.
     function cargar_mis_peticiones() {
         $.ajax({
             type: 'POST',

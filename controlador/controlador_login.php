@@ -32,4 +32,4 @@ if ($comprobacion_encrip != null) {
     echo '<script>alert ("No encontramos ningún usuario con estos datos.\nPor favor, vuelva a intentarlo.");</script>';
 }
 ?>
-<meta http-equiv=Refresh content="0; URL=../vista/login/login.php">.
+<meta http-equiv=Refresh content="0; URL=../vista/login/login.php">
